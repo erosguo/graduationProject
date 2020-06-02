@@ -42,4 +42,9 @@ public class ActivityPlaceServiceImpl implements ActivityPlaceService {
         return activityPlaceDao.updateActivityPlaceIsValid(ActivityPlaceId,ActivityPlaceIsEnable);
     }
 
+    @Override
+    public int deleteActivityPlace(String ActivityPlaceId) {
+        return activityPlaceDao.deleteActivityPlace(ActivityPlaceId);
+    }
+
 }

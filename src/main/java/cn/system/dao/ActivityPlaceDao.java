@@ -40,4 +40,8 @@ public interface ActivityPlaceDao {
             "values(#{ActivityPlaceId},#{ActivityPlaceName},#{ActivityPlaceWeek},#{ActivityPlaceWeekDay},#{ActivityPlaceTeach},#{ActivityPlaceIsEnable})")
     @ResultMap("ActivityPlace")
     public int saveActivityPlace(ActivityPlace activityPlace);
+
+    @Delete("delete from SYSTEM_ACTIVITYPLACE where ActivityPlaceId=#{ActivityPlaceId}")
+    @ResultMap("ActivityPlace")
+    public int deleteActivityPlace(@Param("ActivityPlaceId")String ActivityPlaceId);
 }

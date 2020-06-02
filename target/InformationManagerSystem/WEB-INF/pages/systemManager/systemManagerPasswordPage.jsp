@@ -16,6 +16,30 @@
     <script type="text/javascript" src="<%=path %>/static/jquery-3.4.1.min.js"></script>
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="<%=path %>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
+
     <script>
         function checkPassword() {
             //获取值
@@ -47,6 +71,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                         //判断跳转页面
                         /*window.self.location = "/User/showUserStation";*/
 
@@ -63,47 +88,72 @@
     </script>
     <title>修改密码</title>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/systemManagerBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+<body class="hold-transition skin-purple-light sidebar-mini">
 
-<div class="pageContainer container-fluid">
-    <%--导航栏--%>
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
     <jsp:include page="/WEB-INF/pages/systemManager/systemManagerSideBar.jsp"></jsp:include>
-    <div class="divider"></div>
-    <!-- 正文内容部分 -->
-    <div class="pageContent container-fluid col-md-10">
-        <div class="row">
-            <form class="form-horizontal col-sm-6 col-sm-offset-3">
-                <div class="form-group">
-                    <label for="userPassword1" class="col-sm-2 control-label">旧密码</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="userPassword1"
-                               placeholder="old password">
-                    </div>
+    <div class="content-wrapper">
+
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="#">账号设置</a></li>
+                <li class="active">修改密码</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            <div class="pageContent container-fluid">
+                <div class="row">
+
+                    </br></br></br>
+                    <form class="form-horizontal col-sm-6 col-sm-offset-3">
+                        <div class="form-group">
+                            <label for="userPassword1" class="col-sm-2 control-label">旧密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="userPassword1"
+                                       placeholder="old password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPassword2" class="col-sm-2 control-label">新密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="userPassword2"
+                                       placeholder="new password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10 text-center">
+                                <button type="button" class="btn btn-success" onclick="changePassword()">更&nbsp;&nbsp;改</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="userPassword2" class="col-sm-2 control-label">新密码</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="userPassword2"
-                               placeholder="new password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10 text-center">
-                        <button type="button" class="btn btn-success" onclick="changePassword()">更&nbsp;&nbsp;改</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+            </div>
+
+        </section>
+        <!-- 正文区域 /-->
+
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
 
 
-
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </body>
+
 <script>
     $("#userPassword2").blur(checkPassword);
 </script>

@@ -45,30 +45,90 @@
 
     <title>系统公告</title>
 </head>
-<body  style="background-image:url('<%=path%>/static/img/blueBack.jpeg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<%--页眉部分--%>
-<jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
-<%--主体部分--%>
-<div class="container-fluid ">
-    <div class="row">
-        <div class="row invoice-info">
-            <div class="col-sm-offset-5 col-sm-4 invoice-col">
-                Notice
-                <address>
-                    <strong>系统公告</strong><br>
-                    标题：${systemNotice.systemNoticeName}<br>
-                    内容：${systemNotice.systemNoticeContent}<br>
-                    发布时间：${systemNotice.systemNoticeTime}<br>
-                </address>
+
+<body class="hold-transition skin-purple sidebar-mini">
+
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <header class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.jsp" data-toggle="tab">大学生课外活动管理系统</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="<%=path %>/BackIndex" >返回首页</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </header>
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+
+            <ul class="sidebar-menu">
+                <li class="header">系统招商</li>
+
+                <li id="admin-index"><a href="#"><i class="fa fa-dashboard"></i> <span>联系我们</span></a></li>
+
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 系统公告</a></li>
+            </ol>
+        </section>
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-sm-offset-5 col-sm-4 invoice-col">
+                    <h1>Notice</h1>
+                    <address>
+                        <strong>系统公告</strong><br>
+                        标题：${systemNotice.systemNoticeName}<br>
+                        内容：${systemNotice.systemNoticeContent}<br>
+                        发布时间：${systemNotice.systemNoticeTime}<br>
+                    </address>
+                </div>
             </div>
 
-        </div>
+        </section>
+        <!-- 正文区域 /-->
 
     </div>
-
-
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
-<%--页脚部分--%>
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
+
 </body>
+
+
 </html>

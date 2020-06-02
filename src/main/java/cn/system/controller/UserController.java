@@ -424,7 +424,7 @@ public class UserController {
         String account = (String) request.getSession().getAttribute("account");
         Belong oldBelong=belongService.findUBelongByUserId(account,clubId);
 
-        if(oldBelong==null){
+        if(oldBelong!=null){
             model.addAttribute("tips", "你已经申请过了，请不要重复申请");
         }
         else{
@@ -466,7 +466,7 @@ public class UserController {
      * @param model
      * @return
      */
-    @RequestMapping("/myClub")
+    @RequestMapping("/findMyClub")
     public String findMyClub(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, Model model, HttpServletRequest request) {
         String account = (String) request.getSession().getAttribute("account");
         User user = userService.findUserById(account);
@@ -841,7 +841,7 @@ public class UserController {
 
 
     /**
-     *
+     *添加好友
      * @param friendId
      * @param request
      * @param response
@@ -981,7 +981,7 @@ public class UserController {
     }
 
     /**
-     *
+     *删除消息
      * @param messageId
      * @param request
      * @param response
@@ -1063,13 +1063,13 @@ public class UserController {
         int num = activity.getJoinActivityList().size();
         //先到先得
         if (activity.getActivityPersonMethod() == 1) {
-
+            //直接插入
             if (num < activity.getActivityPersonCount()) {
                 i = joinActivityService.saveJoinActivity(joinActivity);
                 if (i > 0) {
                     map.put("msg", "1");
                 } else {
-                    map.put("msg", "报名失败");
+                    map.put("msg", "系统报名失败");
                 }
             } else {
                 map.put("msg", "人数已满");
@@ -1077,27 +1077,24 @@ public class UserController {
 
         } else {//抽签报名
             RandomUtil randomUtil = new RandomUtil();
-            if (randomUtil.returnBool()) {
-                map.put("msg", "抽签报名失败");
-            } else {
-                int deleteNum = randomUtil.returnNum(num);
-                JoinActivity deleteJoinActivity = activity.getJoinActivityList().get(num);
-                int j = joinActivityService.deleteJoinActivity(deleteJoinActivity.getUserId(), deleteJoinActivity.getActivityId());
-                if (j > 0) {
+            if(num < activity.getActivityPersonCount()){
+                if (randomUtil.returnBool()) {
+                    map.put("msg", "抽签报名失败");
+                } else {
                     i = joinActivityService.saveJoinActivity(joinActivity);
                     if (i > 0) {
                         map.put("msg", "1");
                     } else {
-                        map.put("msg", "报名失败");
+                        map.put("msg", "系统报名失败");
                     }
-                } else {
-                    map.put("msg", "报名失败");
+
                 }
             }
+
         }
 
 
-        System.out.println("表现层，返回map");
+        System.out.println("表现层，signInActivity 返回map");
         return map;
     }
 
@@ -1156,7 +1153,54 @@ public class UserController {
     }
 
     /**
-     *
+     * 邀请成员
+     * @param userId
+     * @param activityId
+     * @param request
+     * @param response
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/inviteUser", method = RequestMethod.POST)
+    public Map<String, Object> inviteUser(String userId,int activityId, HttpServletRequest request, HttpServletResponse response) {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        String account = (String) request.getSession().getAttribute("account");
+
+        User friend = userService.findUserById(userId);
+        if (friend == null) {
+            map.put("msg", "不存在用户" + userId);
+            return map;
+        }
+        if (account.equals(userId)) {
+            map.put("msg", "不要邀请自己");
+            return map;
+        }
+        try {
+            JoinActivity joinActivity=new JoinActivity();
+            //2表示受邀请
+            joinActivity.setJoinActivityIsSuccess(2);
+            joinActivity.setUserId(userId);
+            joinActivity.setActivityId(activityId);
+            int i = joinActivityService.saveJoinActivity(joinActivity);
+            if (i > 0) {
+                map.put("msg", "1");
+            } else {
+                map.put("msg", "2");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("msg", e.getMessage());
+        }
+
+        System.out.println("表现层，返回map");
+        return map;
+    }
+
+
+    /**
+     *展示创建的活动
      * @param page
      * @param size
      * @param model
@@ -1301,6 +1345,7 @@ public class UserController {
                 item2=1;
             }
         }
+        System.out.println(item1+","+item2);
         //取得所有社团活动
         List<Belong> belongList=user.getBelongList();
         System.out.println("get BelongList:"+belongList);
@@ -1317,18 +1362,20 @@ public class UserController {
                 }
             }
         }
-        System.out.println("activity club:"+activityList);
+        System.out.println("社团活动:"+activityList);
         //待报名
         List<Activity> activities1=activityService.findActivityActivityByState(1);
         //报名中
         List<Activity> activities2=activityService.findActivityActivityByState(2);
-
+        System.out.println("可报名的活动："+activities1+activities2);
         //根据兴趣标签推荐待报名的活动
         for(Activity activity:activities1){
-            if(item1==1&&activity.getActivityType()=="1"){
+            if(item1==1&&activity.getActivityType().equals("1")){
+                System.out.println("体育："+activity);
                 activityList.add(activity);
             }
-            else if(item2==1&&activity.getActivityType()=="2"){
+            else if(item2==1&&activity.getActivityType().equals("2")){
+                System.out.println("文艺："+activity);
                 activityList.add(activity);
             }
         }
@@ -1336,11 +1383,12 @@ public class UserController {
         for(Activity activity:activities2){
             //报名人数低于1/3的不进行推荐,根据兴趣标签进行推荐
             if(activity.getJoinActivityList().size()<activity.getActivityPersonCount()){
-
-                if(item1==1&&activity.getActivityType()=="1"){
+                if(activity.getActivityType().equals("1")&&item1==1){
+                    System.out.println("体育："+activity);
                     activityList.add(activity);
                 }
-                else if(item2==1&&activity.getActivityType()=="2"){
+                else if(activity.getActivityType().equals("2")&&item2==1){
+                    System.out.println("文艺："+activity);
                     activityList.add(activity);
                 }
 
@@ -1365,6 +1413,7 @@ public class UserController {
 
         //通过HashSet剔除重复元素
         HashSet temp  =   new  HashSet(activityList);
+        System.out.println(temp);
         activityList.clear();
         activityList.addAll(temp);
         System.out.println("activity final:"+activityList);
@@ -1375,7 +1424,7 @@ public class UserController {
     }
 
     /**
-     *
+     *根据名字查询社团信息
      * @param page
      * @param size
      * @param clubName
@@ -1496,7 +1545,7 @@ public class UserController {
     }
 
     /**
-     *
+     *自定义创建活动
      * @param ActivityName
      * @param ActivityIntroduction
      * @param ActivityContent
@@ -1514,7 +1563,7 @@ public class UserController {
      */
     @RequestMapping("/createManageActivity")
     @ResponseBody
-    public Map<String,Object> createNormalActivity(String ActivityName,String ActivityIntroduction,
+    public Map<String,Object> createManageActivity(String ActivityName,String ActivityIntroduction,
                                                    String ActivityContent,
                                                    String ActivityJoinBeginTime,String ActivityJoinEndTime,
                                                    int ActivityJoinWay,int ActivityPersonCount,
@@ -1532,41 +1581,47 @@ public class UserController {
 
         //获得邀请的成员id
         String [] userId=ActivityJoinPerson.split(",");
-        int weekDay= DateUtil.returnWeekNum();
-        System.out.println("当前周次："+weekDay);
+        int weekNum= DateUtil.returnWeekNum();
+
         //原则上时间要安排在报名结束之后
         int weekDayNum=DateUtil.returnWeekDayNum(ActivityJoinEndTime);
-        System.out.println("当前周日期："+weekDayNum);
+
         if(weekDayNum>6){
             //报名时间大于周六，原则上活动安排到下一周进行
-            weekDay+=1;
+            weekNum+=1;
             weekDayNum=1;
         }
+        System.out.println("要安排的当前周次："+weekNum);
+        System.out.println("要安排的当前周日期："+weekDayNum);
+
         //获取当前周次成员的课表安排信息设置约束变量
         // 约束变量（cijk=1 表示第i个成员第j天第k课次有安排）软约束保证参与率
         int userLength=userId.length+1;
+        //c[][0][0]不计算
         int [][][]c=new int[userLength][8][7];
         List<Select> accountSelectList=selectService.findSelectByUserId(account);
         //创建活动的用户的课表
         for(Select select:accountSelectList){
             Course course=courseService.findCourseById(select.getCourseId(),select.getCourseTeachId());
-            if(course.getCourseWeek()==weekDay){
+            //找到需要安排周的课表信息
+            if(course.getCourseWeek()==weekNum){
                 c[0][course.getCourseWeekDay()][course.getCourseTeach()]=1;
             }
         }
         //被邀请的用户的课表
+        //
         for(int i=0;i<userId.length;i++){
             List<Select> userSelectList=selectService.findSelectByUserId(userId[i]);
             for(Select select:userSelectList){
                 Course course=courseService.findCourseById(select.getCourseId(),select.getCourseTeachId());
-                if(course.getCourseWeek()==weekDay){
+                if(course.getCourseWeek()==weekNum){
                     c[i+1][course.getCourseWeekDay()][course.getCourseTeach()]=1;
                 }
             }
         }
 
         //根据地点进行安排约束变量
-        List<ActivityPlace> activityPlaceList=activityPlaceService.findActivityPlaceByWeekAndValue(weekDay,1);
+        List<ActivityPlace> activityPlaceList=activityPlaceService.findActivityPlaceByWeekAndValue(weekNum,1);
         if(activityPlaceList.size()==0){
             map.put("msg","无可用地点，系统无法自动安排");
             return map;
@@ -1671,6 +1726,14 @@ public class UserController {
 
     }
 
+    /**
+     * 显示学生申请活动列表
+     * @param page
+     * @param size
+     * @param model
+     * @param request
+     * @return
+     */
     @RequestMapping("/showUserApplyActivity")
     public String showUserApplyActivity(@RequestParam(name="page",required = true,defaultValue = "1")int page,@RequestParam(name = "size",required = true,defaultValue = "3")int size,Model model,HttpServletRequest request){
         String account =(String)request.getSession().getAttribute("account");
@@ -1702,7 +1765,44 @@ public class UserController {
         return "user/userUserApplyActivity";
     }
 
+    /**
+     * 邀请展示页
+     * @param page
+     * @param size
+     * @param model
+     * @param request
+     * @return
+     */
+    @RequestMapping("/showUserInvite")
+    public String showUserInvite(@RequestParam(name="page",required = true,defaultValue = "1")int page,@RequestParam(name = "size",required = true,defaultValue = "3")int size,Model model,HttpServletRequest request){
+        String account =(String)request.getSession().getAttribute("account");
+        List<JoinActivity> joinActivityList= joinActivityService.findJoinActivityAllByUserState(account, 2);
+        System.out.println("showUserInvite"+joinActivityList);
+        List<Activity> activityList=new ArrayList<>();
+        for(JoinActivity joinActivity:joinActivityList){
+            Activity activity=activityService.findActivityActivityById(joinActivity.getActivityId());
+            if(activity.getActivityState()<3){
+                activityList.add(activity);
+                System.out.println(activity);
+            }
+        }
+        Page pageList =new Page(page,size,activityList);
+        model.addAttribute("pageList",pageList);
+        return "user/userMyInvite";
+    }
 
+
+    /**
+     * 更改活动报名状态
+     * @param page
+     * @param size
+     * @param userId
+     * @param activityId
+     * @param state
+     * @param request
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/setUserJoinActivityState")
     public ModelAndView setUserJoinActivityState(@RequestParam(name="page",required = true,defaultValue = "1")int page,@RequestParam(name = "size",required = true,defaultValue = "3")int size,String userId,int activityId,int state,HttpServletRequest request) throws Exception{
 
@@ -1719,6 +1819,53 @@ public class UserController {
         return mv;
     }
 
+    /**
+     * 通过邀约
+     * @param activityId
+     * @param stateValue
+     * @return
+     */
+    @RequestMapping("/changeUserJoinActivityState")
+    @ResponseBody
+    public String changeUserJoinActivityState(int activityId,int stateValue,HttpServletRequest request){
+        String answer="";
+        String userId=(String)request.getSession().getAttribute("account");
+        System.out.println("changeUserJoinActivityState"+activityId+"/"+stateValue);
+        int i=joinActivityService.updateJoinActivity(userId,activityId,stateValue);
+        if(i>0){
+            answer="1";
+        }else
+        {
+            answer="加入活动失败";
+        }
+        return answer;
+    }
+
+
+    @RequestMapping("/deleteUserJoinActivityState")
+    @ResponseBody
+    public String deleteUserJoinActivityState(int activityId,HttpServletRequest request){
+        String answer="";
+        String userId=(String)request.getSession().getAttribute("account");
+        int i=joinActivityService.deleteJoinActivity(userId,activityId);
+        if(i>0){
+            answer="1";
+        }else
+        {
+            answer="拒绝加入活动失败，请重试";
+        }
+        return answer;
+    }
+
+    /**
+     * 退出活动报名
+     * @param page
+     * @param size
+     * @param userId
+     * @param activityId
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/deleteUserJoinActivity")
     public ModelAndView deleteUserJoinActivity(@RequestParam(name="page",required = true,defaultValue = "1")int page,@RequestParam(name = "size",required = true,defaultValue = "3")int size,String userId,int activityId) throws Exception{
         ModelAndView mv = new ModelAndView();
@@ -1733,6 +1880,15 @@ public class UserController {
         return mv;
     }
 
+    /**
+     * 取消活动
+     * @param page
+     * @param size
+     * @param activityId
+     * @param request
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/cancelActivity")
     public ModelAndView cancelActivity(@RequestParam(name="page",required = true,defaultValue = "1")int page,@RequestParam(name = "size",required = true,defaultValue = "3")int size,int activityId,HttpServletRequest request) throws Exception{
         ModelAndView mv = new ModelAndView();
@@ -1765,6 +1921,11 @@ public class UserController {
         return mv;
     }
 
+    /**
+     * 显示活动管理
+     * @param activityId
+     * @return
+     */
     @RequestMapping("/showActivityManage")
     public ModelAndView showActivityManage(int activityId){
         ModelAndView mv = new ModelAndView();
@@ -1782,7 +1943,7 @@ public class UserController {
         activityUserList.setActivity(activity);
         activityUserList.setUserApplyActivityUtilList(userApplyActivityUtilList);
         mv.addObject("activityUserList",activityUserList);
-
+        mv.addObject("IsUserCreate","1");
         return mv;
     }
 

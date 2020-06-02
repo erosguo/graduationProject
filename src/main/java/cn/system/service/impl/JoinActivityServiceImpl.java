@@ -46,4 +46,9 @@ public class JoinActivityServiceImpl implements JoinActivityService {
     public int updateJoinActivity(String UserId, int ActivityId, int JoinActivityIsSuccess) {
         return joinActivityDao.updateJoinActivity(UserId,ActivityId,JoinActivityIsSuccess);
     }
+
+    @Override
+    public List<JoinActivity> findJoinActivityAllByUserState(String userId, int JoinActivityIsSuccess) {
+        return joinActivityDao.findJoinActivityAllByUserState(userId,JoinActivityIsSuccess);
+    }
 }

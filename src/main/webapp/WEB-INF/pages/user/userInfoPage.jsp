@@ -16,6 +16,7 @@
     <script type="text/javascript" src="<%=path %>/static/jquery-3.4.1.min.js"></script>
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="<%=path%>/static/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<%=path%>/static/plugins/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="<%=path%>/static/plugins/iCheck/square/blue.css">
@@ -47,6 +48,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                     } else {
                         alert("提示','修改失败" + map.msg);
                     }
@@ -65,8 +67,10 @@
                 type: 'post',
                 success: function (map) {
                     alert("服务器处理中");
+                    location.reload();
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                     } else {
                         alert("提示','修改失败" + map.msg);
                     }
@@ -87,6 +91,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                     } else {
                         alert("提示','修改失败" + map.msg);
                     }
@@ -107,6 +112,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                     } else {
                         alert("提示','修改失败" + map.msg);
                     }
@@ -127,6 +133,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
+                        location.reload();
                     } else {
                         alert("提示','修改失败" + map.msg);
                     }
@@ -140,94 +147,127 @@
     </script>
     <title>修改信息</title>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
 
-<div class="pageContainer container-fluid">
-    <%--导航栏--%>
+<body class="hold-transition skin-blue-light sidebar-mini">
+
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
     <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
-    <div class="divider"></div>
-    <!-- 正文内容部分 -->
-    <div class="pageContent container-fluid col-md-10">
-        <div class="row col-sm-offset-1">
+    <div class="content-wrapper">
 
-            <div class="tab-pane active" id="tab-label">
-                <br/>
-                <br/>
-                <h5 class="col-sm-offset-4">个人信息</h5>
-                <div class="row data-type">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 编辑信息</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
 
-                    <div class="col-md-2 title">用户名</div>
-                    <div class="col-md-10 data text">
-                        <form class="form-inline ">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="userName"
-                                       placeholder="${user.userName}">
-                            </div>
-                            <button type="button" class="btn btn-default" onclick="changeName()">更改用户名</button>
-                        </form>
+        <!-- 正文区域 -->
+        <section class="content">
+
+            </br>
+            </br>
+            </br>
+            <div class="row">
+
+                <div class="tab-pane active" id="tab-label">
+                    <br/>
+                    <br/>
+                    <h5 class="col-sm-offset-4">个人信息</h5>
+                    <div class="row data-type">
+
+                        <div class="col-md-2 title">用户名</div>
+                        <div class="col-md-4 data text">
+                            ${user.userName}
+                        </div>
+                        <div class="col-md-2 title">新用户名</div>
+                        <div class="col-md-4 data text">
+                            <form class="form-inline ">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="userName">
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="changeName()">更改用户名</button>
+                            </form>
+                        </div>
+
+                        <div class="col-md-2 title">用户简介</div>
+                        <div class="col-md-4 data text">
+                            ${user.userIntroduction}
+                        </div>
+                        <div class="col-md-2 title">新简介</div>
+                        <div class="col-md-4 data text">
+                            <form class="form-inline">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="userIntroduction"
+                                           >
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="changeIntroduction()">更改简介</button>
+                            </form>
+                        </div>
+
+                        <div class="col-md-2 title">绑定邮箱</div>
+                        <div class="col-md-4 data text">
+                            ${user.userEmail}
+                        </div>
+                        <div class="col-md-2 title">新邮箱</div>
+                        <div class="col-md-4 data text">
+                            <form class="form-inline">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="userEmail"
+                                           >
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="changeEmail()">更改绑定邮箱</button>
+                            </form>
+                        </div>
+
+                        <div class="col-md-2 title">绑定手机</div>
+                        <div class="col-md-4 data text">
+                            ${user.userTel}
+                        </div>
+                        <div class="col-md-2 title">新手机</div>
+                        <div class="col-md-4 data text">
+                            <form class="form-inline">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="userTel"
+                                           >
+                                </div>
+                                <button type="button" class="btn btn-default" onclick="changeTel()">绑定手机</button>
+                            </form>
+                        </div>
+
+                        <div class="col-md-2 title">兴趣标签</div>
+                        <div class="col-md-10 data text">
+                            ${user.userHobby}
+                        </div>
+
+
+
                     </div>
-
-                    <div class="col-md-2 title">用户简介</div>
-                    <div class="col-md-10 data text">
-                        <form class="form-inline">
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="userIntroduction"
-                                       placeholder="${user.userIntroduction}">
-                            </div>
-                            <button type="button" class="btn btn-default" onclick="changeIntroduction()">更改简介</button>
-                        </form>
-                    </div>
-
-                    <div class="col-md-2 title">绑定邮箱</div>
-                    <div class="col-md-10 data text">
-                        <form class="form-inline">
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="userEmail"
-                                       placeholder="${user.userEmail}">
-                            </div>
-                            <button type="button" class="btn btn-default" onclick="changeEmail()">更改绑定邮箱</button>
-                        </form>
-                    </div>
-
-                    <div class="col-md-2 title">绑定手机</div>
-                    <div class="col-md-10 data text">
-                        <form class="form-inline">
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="userTel"
-                                       placeholder="${user.userTel}">
-                            </div>
-                            <button type="button" class="btn btn-default" onclick="changeTel()">绑定手机</button>
-                        </form>
-                    </div>
-
-                    <div class="col-md-2 title">兴趣爱好</div>
-                    <div class="col-md-10 data text">
-                        ${user.userHobby}
-                    </div>
-
 
 
                 </div>
 
-
             </div>
 
+        </section>
+        <!-- 正文区域 /-->
 
-
-
-
-
-
-
-        </div>
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
+
 </body>
 </html>

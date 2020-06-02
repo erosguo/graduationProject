@@ -188,13 +188,13 @@
     </script>
     <title>注册</title>
 </head>
-<body id="wrapper"style="background-image:url('<%=path%>/static/img/systemBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<body class="hold-transition register-page">
 <jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
 <!--2.主体部分-->
 <div  class="container-fluid " >
 
     <div class="row">
-        <div class="login-box">
+        <div class="register-box">
             <!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">用户注册</p>
@@ -243,8 +243,6 @@
 
 </div>
 
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp" flush="true"></jsp:include>
 </body>
 <script>
     $("#account").blur(checkAccount);

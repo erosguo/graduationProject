@@ -25,12 +25,18 @@
 
     }
 </style>
-    <footer class="container-fluid" id="footer">
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 2.0.1
+    </div>
+    <strong>Copyright &copy; 2016-2020 <a href="#">郭晋龙</a>.</strong> All rights reserved.
+</footer>
+<%--    <footer class="container-fluid" id="footer">
         <div class="row copyright text-center lead">
 			<span>
 				版权所有:
 				<adresss>1098363226@qq.com</adresss>
 			</span>
         </div>
-    </footer>
+    </footer>--%>
 

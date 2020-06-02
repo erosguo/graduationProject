@@ -12,6 +12,6 @@ public interface ActivityPlaceService {
     public List<ActivityPlace> findActivityPlaceValidAll();
     public List<ActivityPlace> findActivityPlaceByWeekAndValue(int ActivityPlaceWeek,int ActivityPlaceIsEnable);
     public int updateActivityPlaceIsValid(String ActivityPlaceId,int ActivityPlaceIsEnable);
-
+    public int deleteActivityPlace(String ActivityPlaceId);
 
 }

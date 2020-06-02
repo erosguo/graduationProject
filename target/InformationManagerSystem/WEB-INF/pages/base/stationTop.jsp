@@ -10,41 +10,19 @@
 
 <!-- 页面头部 /-->
 
-<header class="container-fluid col-md-12">
+<header class="main-header ">
+    <a href="#" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>大学生课外活动</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>课外活动</b>管理系统</span>
+    </a>
+
     <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                    <span class="sr-only">切换导航</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="<%=path %>/static/img/oldPool.jpg" height="100%" />
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a class="icon-bar" href="#">大学生课外活动管理系统</a>
-                    <%--</li>
-                    <li><a href="#">分类管理</a>
-                    </li>
-                    <li><a href="#">城市管理</a>
-                    </li>
-                    <li><a href="#">商品管理</a>
-                    </li>
-                    <li><a href="#">订单管理</a>
-                    </li>--%>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a>欢迎您,<%= request.getSession().getAttribute("account")%></a>
-                    </li>
-                    <li><a href="<%=path %>/logOut">安全退出</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="<%=path %>/logOut">安全退出</a>
+            </li>
+        </ul>
     </nav>
 
 </header>

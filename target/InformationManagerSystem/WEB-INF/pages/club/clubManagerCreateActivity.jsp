@@ -17,15 +17,40 @@
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
+    <link rel="stylesheet" href="<%=path %>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
     <title>创建活动</title>
 
     <script type="text/javascript" src="<%=path %>/static/jquery-3.4.1.min.js"></script>
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
     <script src="<%=path %>/static/js/moment-with-locales.js"></script>
-    <script src="../static/js/moment.js"></script>
+    <script src="<%=path %>/static/js/moment.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
+    <script src="<%=path %>/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="<%=path %>/plugins/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="<%=path%>/plugins/daterangepicker/moment.min.js"></script>
 
     <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
@@ -51,7 +76,7 @@
                     if (map.msg == "1") {
                         alert("创建成功");
                         //判断跳转页面
-                        /*window.self.location = "/User/showUserStation";*/
+                        window.location.href="<%=path%>/ClubManager/showActivityManage?activityId="+map.activityId;
                     } else {
                         alert("提示"+ map.msg);
                     }
@@ -67,19 +92,33 @@
     </script>
 
 </head>
-<body  style="background-image:url('<%=path%>/static/img/clubManagerBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+
+<body class="hold-transition skin-purple sidebar-mini">
 
 
-<div class="container-fluid">
-    <div class="row">
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <jsp:include page="/WEB-INF/pages/club/clubManagerSideBar.jsp" flush="true"></jsp:include>
+    <div class="content-wrapper">
 
-        <!--左边菜单栏-->
-        <jsp:include page="/WEB-INF/pages/club/clubManagerSideBar.jsp"></jsp:include>
-        <div class="divider"></div>
-        <div class="pageContent container-fluid col-md-10">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 活动创建</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
 
+        <!-- 正文区域 -->
+        <section class="content">
+
+
+            <br/><br/>
             <div class="row" style="vertical-align: middle;">
                 <form class="form-horizontal">
                     <div class="form-group">
@@ -140,10 +179,8 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
+                            </div>
                         </div>
-                    </div>
-
-
                     </div>
                     <div class="form-group">
                         <label for="datetimepicker2" class="col-sm-2 control-label">报名结束时间</label>
@@ -173,10 +210,10 @@
                         <label for="datetimepicker4" class="col-sm-2 control-label">活动结束时间</label>
                         <div class="col-sm-9">
                             <div class='input-group date' id='datetimepicker4'>
-                                <input type='text' class="form-control" id="activityEndTime"/>
+                                <input type='text' class="form-control" id="activityEndTime" />
                                 <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -197,15 +234,17 @@
                     </div>
                 </form>
             </div>
+        </section>
+        <!-- 正文区域 /-->
 
-        </div>
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+</div>
 
-</div>
-</div>
-<!--3.页脚部分-->
-<%--<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>--%>
+
 </body>
+
 <script>
 
     $(function () {
@@ -224,7 +263,6 @@
         var picker3 = $('#datetimepicker3').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             locale: moment.locale('zh-cn'),
-
             //minDate: '2016-7-1'
         });
         var picker4 = $('#datetimepicker4').datetimepicker({

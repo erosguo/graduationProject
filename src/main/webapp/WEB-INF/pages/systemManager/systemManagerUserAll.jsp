@@ -19,104 +19,270 @@
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
 
-    <title>社团申请</title>
+    <link rel="stylesheet" href="<%=path %>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
+
+    <title>全部学生</title>
+
+    <script>
+        function resetUserPassword(userId) {
+            $.ajax({
+                url: '<%=path %>/SystemManager/resetUserPassWord',
+                data: "userId=" + userId,
+                type: 'post',
+                success: function (map) {
+                    alert("服务器处理中");
+                    if (map.msg == "1") {
+                        alert("修改成功");
+                    } else {
+                        alert("提示','修改失败" + map.msg);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    /*alert("提示",xhr.responseText);*/
+                    alert("提示，服务器错误" + xhr.responseText);
+                }
+            })
+        }
+        function Value(Id) {
+            $("#userId").val(Id);
+        }
+        function sendMessage() {
+            $.ajax({
+                url: '<%=path %>/SystemManager/addNewMessage',
+                data: "userId=" + $("#userId").val()+"&MessageContent="+$("#messageContent").val(),
+                type: 'post',
+                success: function (map) {
+                    alert("服务器处理中");
+                    if (map.msg == "1") {
+                        alert("修改成功");
+                        $('#myModal2').modal('hide');
+                        location.reload();
+                    } else {
+                        alert("提示','添加失败" + map.msg);
+                        $('#myModal2').modal('hide');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    /*alert("提示",xhr.responseText);*/
+                    alert("提示，服务器错误" + xhr.responseText);
+                    $('#myModal2').modal('hide');
+                }
+            })
+        }
+    </script>
+
 </head>
 
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/systemManagerBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+<body class="hold-transition skin-purple-light sidebar-mini">
 
-<div class="pageContainer container-fluid">
-    <%--导航栏--%>
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
     <jsp:include page="/WEB-INF/pages/systemManager/systemManagerSideBar.jsp"></jsp:include>
-    <div class="divider"></div>
-    <!-- 正文内容部分 -->
-    <div class="container-fluid col-sm-10 ">
-        <div class="row">
+    <div class="content-wrapper">
 
-            <h3 class="text-center">全部角色</h3>
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li class="active">全部学生</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel2">
+                            联系好友
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="messageContent">消息内容</label>
+                                <input type="text" class="form-control" id="messageContent" placeholder="content">
+                            </div>
+                            <input type="hidden" id="userId" value="" name ="userId">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sendMessage()">
+                            发送消息
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <!-- 正文区域 -->
+        <section class="content">
+            <br/><br/>
+            <c:if test="${empty pageList.dataList}">
+                <h1 class="text-center">学生列表空空如也。。。</h1>
+            </c:if>
             <c:if test="${not empty pageList.dataList}">
-                <table class="table">
-                    <tr class="active">
-                        <td>学生账号</td>
-                        <td>学生用户名</td>
-                        <td>学生简介</td>
-                        <td>学生状态</td>
-                        <td>可用操作</td>
-                    </tr>
-                    <c:forEach items="${pageList.dataList}" var ="user">
-                        <tr class="danger">
-                            <td>${user.userId}</td>
-                            <td>${user.userName}</td>
-                            <td>${user.userIntroduction}</td>
-                            <td>
-                                <c:if test="${user.userIsEnable==1}">
-                                    <span>系统成员</span>
-                                </c:if>
-                                <c:if test="${user.userIsEnable==0}">
-                                    <span>待审批</span>
-                                </c:if>
-                            </td>
-                            <td>
-                                    <%--<button class="btn btn-default"></button>--%>
-                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/deleteClub?clubId=${newClub.clubId}'">联系</button>
-                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/deleteClub?clubId=${newClub.clubId}'">重置密码</button>
-                            </td>
-                        </tr>
-
-                    </c:forEach>
-                </table>
-                <div class="row">
-                    <div class="form-group form-inline col-sm-offset-1">
-                        当前第${pageList.currentPage }页/共${pageList.totalPage }页,
-
-                        每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>条数据
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">全部学生</h3>
                     </div>
-                    <div class="col-sm-offset-5 text-right">
-                        <ul class="pagination">
-                            <li>
-                                <a aria-label="Previous" href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=1&size=${pageList.pageSize}">首页</a>
-                            </li>
-                            <c:if test="${pageList.currentPage>1}">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.currentPage-1}&size=${pageList.pageSize}">上一页</a>
-                                </li>
-                            </c:if>
 
-                            <c:forEach begin="1" end="${pageList.totalPage}" var="pageNum">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageNum}&size=${pageList.pageSize}">${pageNum}</a>
-                                </li>
-                            </c:forEach>
-                            <c:if test="${pageList.currentPage<pageList.totalPage}">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.currentPage+1}&size=${pageList.pageSize}">下一页</a>
-                                </li>
-                            </c:if>
+                    <div class="box-body">
 
-                            <li>
-                                <a aria-label="Previous" href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.totalPage}&size=${pageList.pageSize}">尾页</a>
-                            </li>
-                        </ul>
+                        <!-- 数据表格 -->
+                        <div class="table-box">
+
+
+                            <!--数据列表-->
+                            <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th class="sorting_desc">学生id[降序]</th>
+                                    <td>学生用户名</td>
+                                    <td>学生简介</td>
+                                    <td>学生状态</td>
+                                    <td>可用操作</td>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                <c:forEach items="${pageList.dataList}" var ="user">
+                                    <tr>
+                                        <td>${user.userId}</td>
+                                        <td>${user.userName}</td>
+                                        <td>${user.userIntroduction}</td>
+                                        <td>
+                                            <c:if test="${user.userIsEnable==1}">
+                                                <span>系统成员</span>
+                                            </c:if>
+                                            <c:if test="${user.userIsEnable==0}">
+                                                <span>待审批</span>
+                                            </c:if>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" onclick="Value(${user.userId})">
+                                                联系
+                                            </button>
+                                            <button class="btn btn-success" onclick=resetUserPassword('${user.userId}')>重置密码</button>
+                                        </td>
+                                    </tr>
+
+                                </c:forEach>
+
+
+                                </tbody>
+                                <!--
+                            <tfoot>
+                            <tr>
+                            <th>Rendering engine</th>
+                            <th>Browser</th>
+                            <th>Platform(s)</th>
+                            <th>Engine version</th>
+                            <th>CSS grade</th>
+                            </tr>
+                            </tfoot>-->
+                            </table>
+                            <!--数据列表/-->
+
+                        </div>
+                        <!-- 数据表格 /-->
+
+
                     </div>
+                    <!-- /.box-body -->
+
+                    <!-- .box-footer-->
+                    <div class="box-footer">
+                        <div class="pull-left">
+                            <div class="form-group form-inline ">
+                                当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+
+                                每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>条数据
+                            </div>
+                        </div>
+
+                        <div class="box-tools pull-right">
+                            <ul class="pagination">
+                                <li>
+                                    <a aria-label="Previous" href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=1&size=${pageList.pageSize}">首页</a>
+                                </li>
+                                <c:if test="${pageList.currentPage>1}">
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.currentPage-1}&size=${pageList.pageSize}">上一页</a>
+                                    </li>
+                                </c:if>
+
+                                <c:forEach begin="1" end="${pageList.totalPage}" var="pageNum">
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageNum}&size=${pageList.pageSize}">${pageNum}</a>
+                                    </li>
+                                </c:forEach>
+                                <c:if test="${pageList.currentPage<pageList.totalPage}">
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.currentPage+1}&size=${pageList.pageSize}">下一页</a>
+                                    </li>
+                                </c:if>
+
+                                <li>
+                                    <a aria-label="Previous" href="${pageContext.request.contextPath}/SystemManager/showUserAll?page=${pageList.totalPage}&size=${pageList.pageSize}">尾页</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.box-footer-->
+
 
 
                 </div>
 
             </c:if>
-            <c:if test="${empty pageList.dataList}">
-                <h1 class="text-center">学生列表空空如也。。。</h1>
-            </c:if>
-        </div>
+        </section>
+        <!-- 正文区域 /-->
+
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
 
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 
 </body>
 <script>

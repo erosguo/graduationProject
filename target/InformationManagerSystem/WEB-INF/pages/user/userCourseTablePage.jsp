@@ -17,6 +17,28 @@
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 
+    <link rel="stylesheet" href="<%=path%>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
     <title>课表</title>
 
     <script type="text/javascript" src="<%=path %>/static/jquery-3.4.1.min.js"></script>
@@ -24,54 +46,95 @@
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
 
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
 
+<body class="hold-transition skin-blue-light sidebar-mini">
 
-<div class="container-fluid">
-    <div class="row">
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp" flush="true"></jsp:include>
+    <div class="content-wrapper">
 
-        <!--左边菜单栏-->
-        <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
-        <div class="divider"></div>
-        <div class="pageContent container-fluid col-md-10">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 我的课表</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
 
-            <div class="row" style="vertical-align: middle;">
+        <!-- 正文区域 -->
+        <section class="content">
 
-
+            <br/><br/><br/>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">我的课表</h3>
+                    <br/>
+                </div>
+                <c:if test="${empty pageList.dataList}">
+                    <h1 class="text-center">请联系管理员刷新数据库</h1>
+                </c:if>
                 <c:if test="${not empty pageList.dataList}">
-                    <h3 class="col-sm-offset-4">我的课表</h3>
-                    <table class="table">
-                        <tr class="active">
-                            <td>地点</td>
-                            <td>周次</td>
-                            <td>日期</td>
-                            <td>课次</td>
 
-                        </tr>
-                        <c:forEach items="${pageList.dataList}" var ="course">
-                            <tr class="danger">
-                                <td>${course.coursePlace}</td>
-                                <td>${course.courseWeek}</td>
-                                <td>${course.courseWeekDay}</td>
-                                <td>${course.courseTeach}</td>
-                            </tr>
+                    <div class="box-body">
 
-                        </c:forEach>
-                    </table>
-                    <div class="row">
-                        <div class="form-group form-inline col-sm-offset-1">
-                            当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+                        <!-- 数据表格 -->
+                        <div class="table-box">
+                            <!--数据列表-->
+                            <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th>上课地点</th>
+                                    <td>周次</td>
+                                    <td>日期</td>
+                                    <td>课次</td>
+                                </tr>
 
-                            每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
-                            <option>${pageList.pageSize}</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>条数据
+                                </thead>
+
+                                <tbody>
+                                    <c:forEach items="${pageList.dataList}" var ="course">
+                                    <tr>
+                                        <td>${course.coursePlace}</td>
+                                        <td>${course.courseWeek}</td>
+                                        <td>${course.courseWeekDay}</td>
+                                        <td>${course.courseTeach}</td>
+                                    </tr>
+
+                                </c:forEach>
+                                </tbody>
+
+                            </table>
+                            <!--数据列表/-->
+
                         </div>
-                        <div class="col-sm-offset-5 text-right">
+                        <!-- 数据表格 /-->
+
+
+                    </div>
+                    <!-- /.box-body -->
+
+                    <!-- .box-footer-->
+                    <div class="box-footer">
+                        <div class="pull-left">
+                            <div class="form-group form-inline">
+                                当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+
+                                每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
+                                <option>${pageList.pageSize}</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>条数据
+                            </div>
+                        </div>
+
+                        <div class="box-tools pull-right">
                             <ul class="pagination">
                                 <li>
                                     <a aria-label="Previous" href="${pageContext.request.contextPath}/User/showMyCourse?page=1&size=${pageList.pageSize}">首页</a>
@@ -99,23 +162,23 @@
                             </ul>
                         </div>
 
-
                     </div>
+                    <!-- /.box-footer-->
 
-                </c:if>
-                <c:if test="${empty pageList.dataList}">
-                    <h1 class="text-center">请联系管理员刷新数据库</h1>
+
                 </c:if>
             </div>
+        </section>
+        <!-- 正文区域 /-->
 
-        </div>
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+</div>
 
-</div>
-</div>
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
 </body>
+
 <script>
     function changePageSize() {
         var pageSize=$("#changePageSize").val();

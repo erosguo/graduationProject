@@ -45,6 +45,8 @@ public class ClubManagerController {
     private ClubHoldService clubHoldService;
     @Autowired
     private JoinActivityService joinActivityService;
+    @Autowired
+    private MessageService messageService;
     /**
      * 判断是否登录成功
      * @param account
@@ -92,7 +94,7 @@ public class ClubManagerController {
      * @return
      */
     @RequestMapping("/showClubManagerStation")
-    public String showUserStation(Model model,HttpServletRequest request){
+    public String showClubManagerStation(Model model,HttpServletRequest request){
         String account=(String)request.getSession().getAttribute("account");
         ClubManager clubManager=clubManagerService.findClubManagerById(account);
 
@@ -601,6 +603,44 @@ public class ClubManagerController {
         return mv;
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/addNewMessage", method = RequestMethod.POST)
+    public Map<String, Object> addNewMessage(String userId, String MessageContent, HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        try {
+            Message message = new Message();
+            Message lastMessage = messageService.findMessageBiggestId();
+            if (lastMessage == null) {
+                message.setMessageId(1);
+            } else {
+                message.setMessageId(lastMessage.getMessageId() + 1);
+            }
+            String account = (String) request.getSession().getAttribute("account");
+            message.setMessageContent(MessageContent);
+            //2表示来自社团
+            message.setMessageType(2);
+            message.setUserId(userId);
+            message.setMessageFrom(account);
+            System.out.println("message:" + message);
+            int i = messageService.saveMessage(message);
+            if (i > 0) {
+                map.put("msg", "1");
+
+            } else {
+                map.put("msg", "2");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("msg", e.getMessage());
+        }
+
+        System.out.println("表现层，返回map");
+        return map;
+    }
+
+
     /**
      * 社团申请用户管理
      * @param model
@@ -742,6 +782,7 @@ public class ClubManagerController {
 
             if(i>0&&j>0){
                 map.put("msg","1");
+                map.put("activityId",newActivity.getActivityId());
             }
             else{
                 if(i>0){
@@ -755,6 +796,7 @@ public class ClubManagerController {
             e.printStackTrace();
             System.out.println(e);
         }
+
         return map;
 
     }
@@ -924,7 +966,6 @@ public class ClubManagerController {
         activityUserList.setActivity(activity);
         activityUserList.setUserApplyActivityUtilList(userApplyActivityUtilList);
         mv.addObject("activityUserList",activityUserList);
-
         return mv;
     }
 

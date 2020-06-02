@@ -19,57 +19,148 @@
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="<%=path %>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path %>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
+
     <title>学生申请</title>
 </head>
 
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/systemManagerBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+<body class="hold-transition skin-purple-light sidebar-mini">
 
-<div class="pageContainer container-fluid">
-    <%--导航栏--%>
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
     <jsp:include page="/WEB-INF/pages/systemManager/systemManagerSideBar.jsp"></jsp:include>
-    <div class="divider"></div>
-    <!-- 正文内容部分 -->
-    <div class="container-fluid col-sm-10 ">
-        <div class="row">
+    <div class="content-wrapper">
 
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="#">申请审核</a></li>
+                <li class="active">学生管理</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+            <br/><br/>
+            <c:if test="${empty pageList.dataList}">
+                <h1 class="text-center">学生申请空空如也。。。</h1>
+            </c:if>
             <c:if test="${not empty pageList.dataList}">
-                <div class="col-sm-offset-1">
-                    <h3 class="text-center">学生申请</h3>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">学生申请</h3>
                 </div>
-                <table class="table">
-                    <tr class="active">
-                        <td>学号</td>
-                        <td>姓名</td>
-                        <td>邮箱</td>
-                        <td>可用操作</td>
-                    </tr>
-                    <c:forEach items="${pageList.dataList}" var ="user">
-                        <tr class="danger">
-                            <td>${user.userId}</td>
-                            <td>${user.userName}</td>
-                            <td>${user.userEmail}</td>
 
-                            <td>
-                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/changeUserIsEnable?userId=${user.userId}&userIsEnable=1'">通过</button>
-                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/refuseUserApply?userId=${user.userId}'">拒绝</button>
-                            </td>
-                        </tr>
+                <div class="box-body">
 
-                    </c:forEach>
-                </table>
-                <div class="row">
-                    <div class="form-group form-inline col-sm-offset-1">
-                        当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+                    <!-- 数据表格 -->
+                    <div class="table-box">
 
-                        每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>条数据
+
+                        <div class="box-tools pull-right">
+                            <div class="has-feedback">
+                                <input type="text" class="form-control input-sm" placeholder="搜索" disabled="disabled">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <!--工具栏/-->
+
+                            <!--数据列表-->
+                            <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+
+                                    <th class="sorting_asc">学号[升序]</th>
+                                    <th class="sorting_desc">姓名 </th>
+                                    <th class="sorting_asc sorting_asc_disabled">邮箱</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <c:forEach items="${pageList.dataList}" var ="user">
+                                        <tr >
+                                            <td>${user.userId}</td>
+                                            <td>${user.userName}</td>
+                                            <td>${user.userEmail}</td>
+
+                                            <td>
+                                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/passUserApply?userId=${user.userId}&userIsEnable=1'">通过</button>
+                                                <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/SystemManager/refuseUserApply?userId=${user.userId}'">拒绝</button>
+                                            </td>
+                                        </tr>
+
+                                    </c:forEach>
+
+
+                                </tbody>
+                                <!--
+                            <tfoot>
+                            <tr>
+                            <th>Rendering engine</th>
+                            <th>Browser</th>
+                            <th>Platform(s)</th>
+                            <th>Engine version</th>
+                            <th>CSS grade</th>
+                            </tr>
+                            </tfoot>-->
+                            </table>
+                            <!--数据列表/-->
+
                     </div>
-                    <div class="col-sm-offset-5 text-right">
+                    <!-- 数据表格 /-->
+
+
+                </div>
+                <!-- /.box-body -->
+
+                <!-- .box-footer-->
+                <div class="box-footer">
+                    <div class="pull-left">
+                        <div class="form-group form-inline ">
+                            当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+
+                            每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>条数据
+                        </div>
+                    </div>
+
+                    <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
                                 <a aria-label="Previous" href="${pageContext.request.contextPath}/SystemManager/showUserApply?page=1&size=${pageList.pageSize}">首页</a>
@@ -97,20 +188,26 @@
                         </ul>
                     </div>
 
-
                 </div>
+                <!-- /.box-footer-->
+
+
+
+            </div>
 
             </c:if>
-            <c:if test="${empty pageList.dataList}">
-                <h1 class="text-center">学生申请空空如也。。。</h1>
-            </c:if>
-        </div>
+        </section>
+        <!-- 正文区域 /-->
+
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
 
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
 </body>
+
+
 <script>
     function changePageSize() {
         var pageSize=$("#changePageSize").val();

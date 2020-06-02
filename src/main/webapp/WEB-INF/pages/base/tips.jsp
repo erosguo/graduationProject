@@ -54,7 +54,7 @@
 
 
 </div>
-<%--页脚部分--%>
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+<%--页脚部分
+<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>--%>
 </body>
 </html>

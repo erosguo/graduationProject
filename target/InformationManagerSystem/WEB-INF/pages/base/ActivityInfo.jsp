@@ -43,10 +43,34 @@
     <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="<%=path %>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 
-
+    <script>
+        function inviteUser(activityId) {
+            $.ajax({
+                url: '<%=path %>/User/inviteUser',
+                data: "userId=" + $("#userId").val()+"&activityId="+activityId,
+                type: 'post',
+                success: function (map) {
+                    alert("服务器处理中");
+                    if (map.msg == "1") {
+                        alert("邀请成功");
+                        $('#myModal').modal('hide');
+                        location.reload();
+                    } else {
+                        alert("提示','添加失败" + map.msg);
+                        $('#myModal').modal('hide');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    /*alert("提示",xhr.responseText);*/
+                    alert("提示，服务器错误" + xhr.responseText);
+                    $('#myModal').modal('hide');
+                }
+            })
+        }
+    </script>
     <title>活动详情</title>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/systemBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<body id="wrapper" >
 <%--页眉部分--%>
 <jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
 <%--主体部分--%>
@@ -59,7 +83,37 @@
                        value=”返回上一页”>
             </div>
         </c:if>
+        <!-- 模态框1（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            邀请用户
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="userId">用户Id</label>
+                                <input type="text" class="form-control" id="userId" placeholder="user id">
+                            </div>
 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="inviteUser(${activityUserList.activity.activityId})">
+                            邀请用户
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
         <c:if test="${not empty activityUserList}">
 
             <div class="col-md-8 data-type">
@@ -176,13 +230,8 @@
                     <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
                 </div>
             </div>
-
-            <div class="col-md-4" style="overflow:scroll;height: 80%">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <h3 class="text-center">报名名单</h3>
+            <div class="col-md-4" style="background-color: #00a7d0; overflow:scroll;height: 80%">
+                <h3 class="text-center">人员名单</h3>
                 <c:if test="${empty activityUserList.userApplyActivityUtilList}">
                     <h4 class="text-center">
                         暂无成员报名
@@ -208,6 +257,9 @@
                                     <c:if test="${user.joinState==0}">
                                         等待审核
                                     </c:if>
+                                    <c:if test="${user.joinState==2}">
+                                        等待同意
+                                    </c:if>
                                 </td>
                                 <td>
                                     <c:if test="${user.joinState==0}">
@@ -221,8 +273,14 @@
                         </c:forEach>
                     </table>
                 </c:if>
+                <c:if test="${activityUserList.activity.activityState==0 ||activityUserList.activity.activityState==1||activityUserList.activity.activityState==2}">
+                    <c:if  test="${ not empty IsUserCreate}">
+                        <button class="btn btn-pinterest col-md-offset-5" data-toggle="modal" data-target="#myModal">邀请用户</button>
+                    </c:if>
+                </c:if>
 
             </div>
+
 
 
         </c:if>
@@ -233,11 +291,10 @@
 </div>
 <%--页脚部分--%>
 <%--<jsp:include page="<%=path%>/WEB-INF/pages/base/footer.jsp"></jsp:include>--%>
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+<%--<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>--%>
 </body>
 <script>
     function setUserState(userId,activityId,state) {
-
         $.ajax({
             url:'<%=path %>/ClubManager/setUserJoinActivityStateNew',
             data:"userId="+userId+"&activityId="+activityId+"&state="+state,

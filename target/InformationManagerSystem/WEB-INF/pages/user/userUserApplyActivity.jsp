@@ -16,6 +16,27 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="stylesheet" href="<%=path%>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
 
     <title>申请列表</title>
 
@@ -44,79 +65,121 @@
 
     </style>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+<body class="hold-transition skin-blue-light sidebar-mini">
 
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp" flush="true"></jsp:include>
+    <div class="content-wrapper">
 
-<div class="container-fluid">
-    <div class="row">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 活动信息</a></li>
+                <li class="active">管理活动申请</li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
 
-        <!--左边菜单栏-->
-        <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
-        <div class="divider"></div>
-        <div class="pageContent container-fluid col-md-10">
-            <div class="row" style="vertical-align: middle;">
-                <h2 class="text-center">活动审核</h2>
-                </br>
-                </br>
+        <!-- 正文区域 -->
+        <section class="content">
+            <br/>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">管理活动申请</h3>
+                </div>
+
+                <c:if test="${empty pageList.dataList}">
+                    <h1 class="text-center">还没有学生申请活动</h1>
+                </c:if>
+
                 <c:if test="${not empty pageList.dataList}">
-                    <table class="table">
-                        <tr class="active">
-                            <td>活动编号</td>
-                            <td>活动名称</td>
-                            <td>活动状态</td>
-                            <td>报名人数</td>
-                            <td>人数上限</td>
-                            <td>报名人员</td>
-                            <td>可选操作</td>
+                    <div class="box-body">
 
-                        </tr>
+                        <!-- 数据表格 -->
+                        <div class="table-box">
 
-                        <c:forEach items="${pageList.dataList}" var ="UserApplyActivityUtil">
-                            <tr class="danger">
-                                <td>${UserApplyActivityUtil.activityId}</td>
-                                <td>${UserApplyActivityUtil.activityName}</td>
-                                <td>
-                                    <c:if test="${UserApplyActivityUtil.activityState==1}">
-                                        未开放报名
-                                    </c:if>
-                                    <c:if test="${UserApplyActivityUtil.activityState==2}">
-                                        火热报名中
-                                    </c:if>
-                                    <c:if test="${UserApplyActivityUtil.activityState==3}">
-                                        活动进行中
-                                    </c:if>
-                                    <c:if test="${UserApplyActivityUtil.activityState==4}">
-                                        活动已结束
-                                    </c:if>
-                                </td>
-                                <td>${UserApplyActivityUtil.activityCurrentCount}</td>
-                                <td>${UserApplyActivityUtil.activityPersonCount}</td>
-                                <td>姓名：${UserApplyActivityUtil.user.userName} <br/>学号：${UserApplyActivityUtil.user.userId}
-                                    <br/>个人简介：${UserApplyActivityUtil.user.userIntroduction} &nbsp 个人标签：${UserApplyActivityUtil.user.userHobby}
-                                </td>
-                                <td>
-                                    <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/User/setUserJoinActivityState?page=${pageList.currentPage}&size=${pageList.pageSize}&userId=${UserApplyActivityUtil.user.userId}&activityId=${UserApplyActivityUtil.activityId}&state=1'">批准申请</button>
-                                    <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/User/deleteUserJoinActivity?page=${pageList.currentPage}&size=${pageList.pageSize}&userId=${UserApplyActivityUtil.user.userId}&activityId=${UserApplyActivityUtil.activityId}'">拒绝申请</button>
-                                        <%--<button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/ClubManager/showActivityDetail?activityId=${activity.activityId}'">详情</button>--%>
-                                </td>
-                            </tr>
 
-                        </c:forEach>
-                    </table>
-                    <div class="row">
-                        <div class="form-group form-inline">
-                            当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+                            <!--数据列表-->
+                            <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                                <thead>
+                                <tr>
+                                    <th class="sorting_desc">活动编号[降序]</th>
+                                    <td>活动名称</td>
+                                    <td>活动状态</td>
+                                    <td>报名人数</td>
+                                    <td>人数上限</td>
+                                    <td>报名人员</td>
+                                    <td>可选操作</td>
 
-                            每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
-                            <option>${pageList.pageSize}</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>条数据
+                                </tr>
+
+                                </thead>
+
+                                <tbody>
+                                    <c:forEach items="${pageList.dataList}" var ="UserApplyActivityUtil">
+                                    <tr>
+                                        <td>${UserApplyActivityUtil.activityId}</td>
+                                        <td>${UserApplyActivityUtil.activityName}</td>
+                                        <td>
+                                            <c:if test="${UserApplyActivityUtil.activityState==1}">
+                                                未开放报名
+                                            </c:if>
+                                            <c:if test="${UserApplyActivityUtil.activityState==2}">
+                                                火热报名中
+                                            </c:if>
+                                            <c:if test="${UserApplyActivityUtil.activityState==3}">
+                                                活动进行中
+                                            </c:if>
+                                            <c:if test="${UserApplyActivityUtil.activityState==4}">
+                                                活动已结束
+                                            </c:if>
+                                        </td>
+                                        <td>${UserApplyActivityUtil.activityCurrentCount}</td>
+                                        <td>${UserApplyActivityUtil.activityPersonCount}</td>
+                                        <td>姓名：${UserApplyActivityUtil.user.userName} <br/>学号：${UserApplyActivityUtil.user.userId}
+                                            <br/>个人简介：${UserApplyActivityUtil.user.userIntroduction} &nbsp 个人标签：${UserApplyActivityUtil.user.userHobby}
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/User/setUserJoinActivityState?page=${pageList.currentPage}&size=${pageList.pageSize}&userId=${UserApplyActivityUtil.user.userId}&activityId=${UserApplyActivityUtil.activityId}&state=1'">批准申请</button>
+                                            <button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/User/deleteUserJoinActivity?page=${pageList.currentPage}&size=${pageList.pageSize}&userId=${UserApplyActivityUtil.user.userId}&activityId=${UserApplyActivityUtil.activityId}'">拒绝申请</button>
+                                                <%--<button class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/ClubManager/showActivityDetail?activityId=${activity.activityId}'">详情</button>--%>
+                                        </td>
+                                    </tr>
+
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                            <!--数据列表/-->
+
                         </div>
-                        <div class="col-sm-offset-5 text-right">
+                        <!-- 数据表格 /-->
+
+
+                    </div>
+                    <!-- /.box-body -->
+
+                    <!-- .box-footer-->
+                    <div class="box-footer">
+                        <div class="pull-left">
+                            <div class="form-group form-inline">
+                                当前第${pageList.currentPage }页/共${pageList.totalPage }页,
+
+                                每页<select class="form-control" id="changePageSize" onchange="changePageSize()">
+                                <option>${pageList.pageSize}</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>条数据
+                            </div>
+                        </div>
+
+                        <div class="box-tools pull-right">
                             <ul class="pagination">
                                 <li>
                                     <a aria-label="Previous" href="${pageContext.request.contextPath}/User/showUserApplyActivity?page=1&size=${pageList.pageSize}">首页</a>
@@ -144,23 +207,23 @@
                             </ul>
                         </div>
 
-
                     </div>
+                    <!-- /.box-footer-->
 
-                </c:if>
-                <c:if test="${empty pageList.dataList}">
-                    <h1 class="text-center">还没有学生申请活动</h1>
+
                 </c:if>
             </div>
+        </section>
+        <!-- 正文区域 /-->
 
-        </div>
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+</div>
 
-</div>
-</div>
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
 </body>
+
 <script>
     function changePageSize() {
         var pageSize=$("#changePageSize").val();

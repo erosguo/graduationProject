@@ -73,9 +73,9 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("创建成功");
-                        window.location.href="<%=path%>/User/showActivityDetail?activityId="+map.activityId;
+                        window.location.href="<%=path%>/User/showActivityManage?activityId="+map.activityId;
                     } else {
-                        alert("系统提示",map.msg,"success");
+                        alert("系统提示"+map.msg);
 
                     }
                 },
@@ -88,18 +88,33 @@
     </script>
 
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
 
+<body class="hold-transition skin-blue-light sidebar-mini">
 
-<div class="container-fluid ">
-    <div class="row">
-        <!--左边菜单栏-->
-        <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
-        <div class="divider"></div>
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
+    <div class="content-wrapper">
 
-        <div class="pageContent container-fluid col-md-10">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 创建活动</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            </br>
+            </br>
+            </br>
             <div class="row data-type">
 
                 <div class="col-md-2 title">活动名称</div>
@@ -212,39 +227,33 @@
                     <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
                 </div>
             </div>
-        </div>
+
+        </section>
+        <!-- 正文区域 /-->
+
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
 
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
 </body>
+<%--<script src="<%=path%>/static/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="<%=path%>/static/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>--%>
 <script>
+
     $(function () {
         var picker1 = $('#datetimepicker1').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             locale: moment.locale('zh-cn'),
-
             //minDate: '2016-7-1'
         });
         var picker2 = $('#datetimepicker2').datetimepicker({
             locale: moment.locale('zh-cn'),
-
             format : 'YYYY-MM-DD HH:mm:ss',
 
         });
-        var picker3 = $('#datetimepicker3').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
-            locale: moment.locale('zh-cn'),
 
-            //minDate: '2016-7-1'
-        });
-        var picker4 = $('#datetimepicker4').datetimepicker({
-            locale: moment.locale('zh-cn'),
-
-            format : 'YYYY-MM-DD HH:mm:ss',
-
-        });
     });
 </script>
 </html>

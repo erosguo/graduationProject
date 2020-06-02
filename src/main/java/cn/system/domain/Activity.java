@@ -2,6 +2,7 @@ package cn.system.domain;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 活动
@@ -172,6 +173,30 @@ public class Activity implements Serializable {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Activity activity = (Activity) o;
+        return ActivityId == activity.ActivityId &&
+                ActivityState == activity.ActivityState &&
+                ActivityJoinWay == activity.ActivityJoinWay &&
+                ActivityPersonCount == activity.ActivityPersonCount &&
+                ActivityPersonMethod == activity.ActivityPersonMethod &&
+                Objects.equals(ActivityName, activity.ActivityName) &&
+                Objects.equals(ActivityIntroduction, activity.ActivityIntroduction) &&
+                Objects.equals(ActivityContent, activity.ActivityContent) &&
+                Objects.equals(ActivityPlace, activity.ActivityPlace) &&
+                Objects.equals(ActivityJoinBeginTime, activity.ActivityJoinBeginTime) &&
+                Objects.equals(ActivityJoinEndTime, activity.ActivityJoinEndTime) &&
+                Objects.equals(ActivityType, activity.ActivityType) &&
+                Objects.equals(ActivityBeginTime, activity.ActivityBeginTime) &&
+                Objects.equals(ActivityEndTime, activity.ActivityEndTime) &&
+                Objects.equals(joinActivityList, activity.joinActivityList);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(ActivityId, ActivityName, ActivityIntroduction, ActivityContent, ActivityPlace, ActivityJoinBeginTime, ActivityJoinEndTime, ActivityState, ActivityJoinWay, ActivityPersonCount, ActivityPersonMethod, ActivityType, ActivityBeginTime, ActivityEndTime, joinActivityList);
+    }
 }

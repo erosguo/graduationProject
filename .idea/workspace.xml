@@ -6,7 +6,153 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e90042d8-b6d2-4136-914e-457742866c0c" name="Default Changelist" comment="" />
+    <list default="true" id="e90042d8-b6d2-4136-914e-457742866c0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyInvite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axis.log" beforeDir="false" afterPath="$PROJECT_DIR$/axis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/controller/SystemManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/controller/SystemManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/dao/ActivityPlaceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/dao/ActivityPlaceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/dao/JoinActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/dao/JoinActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/service/ActivityPlaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/service/ActivityPlaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/service/JoinActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/service/JoinActivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/service/impl/ActivityPlaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/service/impl/ActivityPlaceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/system/service/impl/JoinActivityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/system/service/impl/JoinActivityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/Activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/Activity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/baseTop.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/club.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/club.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/createClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/createClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/logIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/logIn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/signIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/signIn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/stationTop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/stationTop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/systemNotice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/systemNotice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/tips.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/tips.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerActivityState.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerActivityState.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerClubNoticePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerClubNoticePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubApply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubApply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserApply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserApply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userClubDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userClubDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyMessageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyMessageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSearchClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSearchClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/ClubManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/ClubManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/SystemManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/SystemManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/dao/ActivityPlaceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/dao/ActivityPlaceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/dao/JoinActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/dao/JoinActivityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/domain/Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/domain/Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/ActivityPlaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/ActivityPlaceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/JoinActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/JoinActivityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/impl/ActivityPlaceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/impl/ActivityPlaceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/impl/JoinActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/classes/cn/system/service/impl/JoinActivityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/Activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/Activity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/ActivityInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/ActivityInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/baseTop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/baseTop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/club.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/club.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/clubDiscuss.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/clubDiscuss.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/createClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/createClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/logIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/logIn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/signIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/signIn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/stationTop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/stationTop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/systemNotice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/systemNotice.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/tips.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/base/tips.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerActivityState.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerActivityState.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerClubNoticePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerClubNoticePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerCreateActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerCreateActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerClubAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerClubAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerClubApply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerClubApply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerUserApply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerUserApply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCheckHobby.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCheckHobby.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userClubDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userClubDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCourseTablePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCourseTablePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCreateManageActivityPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userCreateManageActivityPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userFriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userFriendList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userHotActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userHotActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userHotClubInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userHotClubInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userInfoPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userInfoPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyJoinActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyJoinActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyJoinedClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyJoinedClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyMessageInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userMyMessageInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userPasswordPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userPasswordPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userSearchClub.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userSearchClub.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userSideBar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userSideBar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userStation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userStation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userUserApplyActivity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/WEB-INF/pages/user/userUserApplyActivity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/InformationManagerSystem/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/InformationManagerSystem/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/controller/ClubManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/controller/ClubManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/controller/SystemManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/controller/SystemManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/dao/ActivityPlaceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/dao/ActivityPlaceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/dao/JoinActivityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/dao/JoinActivityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/domain/Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/domain/Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/service/ActivityPlaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/service/ActivityPlaceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/service/JoinActivityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/service/JoinActivityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/service/impl/ActivityPlaceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/service/impl/ActivityPlaceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/system/service/impl/JoinActivityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/system/service/impl/JoinActivityServiceImpl.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,22 +184,120 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37375">
-              <caret line="1514" column="34" selection-start-line="1514" selection-start-column="22" selection-end-line="1514" selection-end-column="34" />
+            <state relative-caret-position="117">
+              <caret line="275" column="161" selection-start-line="275" selection-start-column="161" selection-end-line="275" selection-end-column="161" />
+              <folding>
+                <element signature="n#c:if#10;n#c:if#1;n#jsp:root#0;n#!!top" />
+                <element signature="n#c:forEach#0;n#c:if#11;n#c:if#1;n#jsp:root#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-803">
+              <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+              <folding>
+                <element signature="n#c:if#0;n#jsp:root#0;n#!!top" />
+                <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityManageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2205">
+              <caret line="175" column="7" selection-start-line="175" selection-start-column="7" selection-end-line="175" selection-end-column="7" />
+              <folding>
+                <element signature="method#createIndividualList#0;class#ActivityManageUtil#0" />
+                <element signature="method#fitnessCalculation#0;class#ActivityManageUtil#0" />
+                <element signature="method#selectGeneration#0;class#ActivityManageUtil#0" />
+                <element signature="method#crossOperation#0;class#ActivityManageUtil#0" />
+                <element signature="method#mutationOperation#0;class#ActivityManageUtil#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityManageUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinActivity.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="244" column="27" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
+            <state relative-caret-position="299">
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
               <folding>
-                <element signature="method#mutationOperation#0;class#ActivityManageUtil#0" />
+                <element signature="n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="1417" column="34" selection-start-line="1417" selection-start-column="34" selection-end-line="1417" selection-end-column="34" />
+              <folding>
+                <element signature="e#24995#25680#0" />
+                <element signature="e#63214#65209#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/dao/ActivityDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-339">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1750">
+              <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="71" selection-end-column="86" />
+              <folding>
+                <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1875">
+              <caret line="75" column="79" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -68,43 +312,43 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="jsf" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>Map&lt;String, Object&gt;</find>
+      <find>message</find>
+      <find>ApplyActivity</find>
       <find>Apply</find>
-      <find>showCreateM</find>
-      <find>CreateM</find>
-      <find>Friend</find>
-      <find>activityPlaceHashMap</find>
-      <find>fitnessCalculation</find>
-      <find>createIndividualList</find>
-      <find>Inter</find>
-      <find>individual</find>
-      <find>individual0</find>
-      <find>crossOperation</find>
-      <find>activityPlaceMap</find>
-      <find>servlet-mapping</find>
-      <find>caption</find>
-      <find>blur</find>
-      <find>thumbnail</find>
-      <find>hot</find>
-      <find>showAc</find>
+      <find>联系</find>
+      <find>signInActivity</find>
+      <find>cancelSignInActivity</find>
+      <find>num</find>
+      <find>系统</find>
+      <find>addNew</find>
+      <find>weekDay</find>
+      <find>addnewM</find>
+      <find>showUser</find>
+      <find>通知</find>
+      <find>showClubManagerU</find>
+      <find>friend</find>
       <find>showActivity</find>
-      <find>manage</find>
-      <find>setUser</find>
-      <find>dele</find>
-      <find>showActivitySta</find>
-      <find>showUserA</find>
-      <find>createMyA</find>
-      <find>createMana</find>
-      <find>activityDetail</find>
+      <find>set</find>
+      <find>invite</find>
+      <find>showActivityDetail</find>
+      <find>createClubActivity</find>
+      <find>ActivityM</find>
       <find>createManage</find>
-      <find>bestGenerations</find>
-      <find>oldfitness</find>
+      <find>showActivityM</find>
+      <find>datetimepicker1</find>
+      <find>datetimepicker3</find>
+      <find>邀请</find>
+      <find>showActivityManage</find>
+      <find>hot</find>
+      <find>hotact</find>
     </findStrings>
     <replaceStrings>
       <replace>account</replace>
@@ -124,57 +368,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerActivityState.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userStation.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerStation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userClubDiscussInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/baseTop.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/systemNotice.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSearchClub.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/club.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/tips.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserApply.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyMessageInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerInfoPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSideBar.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubAll.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/logIn.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/signIn.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerClubNoticePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerPasswordPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/Activity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyMessageInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateNormalActivityPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userClubDiscussInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSearchClub.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerStation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubApply.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/system/controller/SystemManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userStation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/system/test/TestDateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/system/utils/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerSideBar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/Activity.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyClubDiscussInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserAll.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/system/service/JoinActivityService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/system/service/impl/JoinActivityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/system/utils/UserApplyActivityUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityUserList.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerActivityState.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/system/dao/JoinActivityDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyInvite.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyCreatedActivityPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinActivity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityManageUtil.java" />
       </list>
     </option>
   </component>
@@ -214,7 +458,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1944" />
@@ -226,19 +470,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -271,6 +508,24 @@
               <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,21 +552,33 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="InformationManagerSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InformationManagerSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589727732351" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591021037227" />
     <property name="last_opened_file_path" value="E:/专业综合设计/成品/源代码/hospitalmanage" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -523,9 +790,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDateUtil.getNowWeek" />
         <item itemvalue="JUnit.TestDateUtil.testReturnManageTime" />
         <item itemvalue="JUnit.TestDateUtil.testGetWeekDay" />
-        <item itemvalue="JUnit.TestDateUtil.getNowWeek" />
         <item itemvalue="JUnit.TestClub.testClubFindByName" />
         <item itemvalue="JUnit.TestDateUtil.timeCompare" />
       </list>
@@ -591,14 +858,22 @@
       <workItem from="1589675426002" duration="11174000" />
       <workItem from="1589761629984" duration="558000" />
       <workItem from="1590113534160" duration="1471000" />
-      <workItem from="1590133025390" duration="2165000" />
+      <workItem from="1590133025390" duration="2761000" />
+      <workItem from="1590199111659" duration="3728000" />
+      <workItem from="1590286910043" duration="3060000" />
+      <workItem from="1590306384512" duration="9004000" />
+      <workItem from="1590318513789" duration="11747000" />
+      <workItem from="1590370446267" duration="13456000" />
+      <workItem from="1590457588761" duration="21391000" />
+      <workItem from="1590635889561" duration="12408000" />
+      <workItem from="1590673382831" duration="752000" />
+      <workItem from="1590734215843" duration="3152000" />
+      <workItem from="1590890997091" duration="2113000" />
+      <workItem from="1590991859558" duration="5523000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDateUtil_testReturnManageTime - 2020.05.09 at 19h 21m 15s.xml">
-      <configuration name="TestDateUtil.testReturnManageTime" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestDateUtil_testReturnManageTime - 2020.05.09 at 19h 23m 09s.xml">
       <configuration name="TestDateUtil.testReturnManageTime" configurationId="JUnit" />
     </history-entry>
@@ -626,9 +901,12 @@
     <history-entry file="TestDateUtil_testReturnManageTime - 2020.05.15 at 20h 05m 46s.xml">
       <configuration name="TestDateUtil.testReturnManageTime" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestDateUtil_getNowWeek - 2020.05.26 at 21h 40m 55s.xml">
+      <configuration name="TestDateUtil.getNowWeek" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="685237000" />
+    <option name="totallyTimeSpent" value="772167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -640,9 +918,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49720672" visible="true" weight="0.4025869" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49720672" visible="true" weight="0.3476152" />
       <window_info id="Structure" order="1" sideWeight="0.5027933" side_tool="true" weight="0.31204528" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -652,7 +930,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497979" visible="true" weight="0.3623446" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49717057" weight="0.3623446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -661,20 +939,20 @@
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.502021" side_tool="true" visible="true" weight="0.3623446" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50282943" side_tool="true" weight="0.3623446" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3285968" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven" order="1" visible="true" weight="0.32983023" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32983023" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.2497979" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2497979" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.32983023" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32983023" />
       <window_info anchor="right" id="Database" order="9" weight="0.32983023" />
     </layout>
     <layout-to-restore>
@@ -721,18 +999,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp</url>
           <line>10</line>
           <properties />
@@ -746,7 +1012,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java</url>
-          <line>587</line>
+          <line>589</line>
           <properties class="cn.system.controller.ClubManagerController" method="deleteUser">
             <option name="EMULATED" value="true" />
           </properties>
@@ -760,434 +1026,474 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/signIn.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/domain/ClubManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/dao/ClubManagerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyManageInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateActivityResult.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerPasswordPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-          <folding>
-            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
-          <folding>
-            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerInfoPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="2100">
+          <caret line="84" selection-start-line="84" selection-end-line="200" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/club.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="1225">
+          <caret line="49" selection-start-line="49" selection-end-line="125" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1200">
+          <caret line="48" selection-start-line="48" selection-end-line="159" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerStation.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="50" selection-start-line="50" selection-end-line="109" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/clubDiscuss.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userPasswordPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="159">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/tips.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="1020">
+          <caret line="56" column="8" selection-start-line="56" selection-end-line="57" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerPasswordPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerStation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserApply.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="121" column="49" lean-forward="true" selection-start-line="121" selection-start-column="49" selection-end-line="121" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userClubDiscussInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-end-line="27" />
+        <state relative-caret-position="165">
+          <caret line="50" selection-start-line="50" selection-end-line="203" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCourseTablePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2630">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateClubDiscuss.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1195">
+          <caret line="78" column="54" lean-forward="true" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerInfoPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+          <folding>
+            <element signature="e#4296#4957#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerInfoPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#2973#3680#0#HTML" />
+            <element signature="e#3710#4410#0#HTML" />
+            <element signature="e#4442#5148#0#HTML" />
+            <element signature="n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerValidClubAll.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+          <folding>
+            <element signature="n#script#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubAll.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="90" column="120" selection-start-line="90" selection-start-column="120" selection-end-line="90" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSideBar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerSystemNoticeInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerActivityPlaceAll.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="139" column="64" lean-forward="true" selection-start-line="139" selection-start-column="64" selection-end-line="139" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerCreateSystemNoticePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <element signature="e#2786#3504#0#HTML" />
+            <element signature="n#ul#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyMessageInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="26" column="8" selection-start-line="26" selection-end-line="27" />
+        <state relative-caret-position="179">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerClubApply.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        <state relative-caret-position="134">
+          <caret line="99" column="120" selection-start-line="99" selection-start-column="120" selection-end-line="99" selection-end-column="120" />
+          <folding>
+            <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userStation.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/createClub.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/test/TestDateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+        <state relative-caret-position="-125">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/DateUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/SystemManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1609">
-          <caret line="85" column="15" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerSideBar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSearchClub.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="120" column="37" selection-start-line="120" selection-end-line="121" />
+        <state relative-caret-position="3625">
+          <caret line="397" column="39" selection-start-line="397" selection-start-column="39" selection-end-line="397" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="80" column="20" selection-start-line="80" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCheckHobby.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateNormalActivityPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="68" column="31" selection-start-line="68" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyClubDiscussInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.xhtml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/UserApplyActivityUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-650">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="109" selection-start-line="109" selection-end-line="109" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerClubNoticePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="71" column="67" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/logIn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="131" column="17" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="131" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="214" column="181" selection-start-line="214" selection-start-column="181" selection-end-line="214" selection-end-column="181" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10489#11889#0#HTML" />
-            <element signature="e#11293#11934#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/dao/ActivityDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerActivityState.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="928" column="5" selection-start-line="909" selection-start-column="4" selection-end-line="928" selection-end-column="5" />
-          <folding>
-            <element signature="method#deleteUser#0;class#ClubManagerController#0" />
-            <element signature="method#showActivityState#0;class#ClubManagerController#0" />
-            <element signature="method#showActivityDetail#0;class#ClubManagerController#0" />
-            <element signature="method#showUserApplyActivity#0;class#ClubManagerController#0" />
-            <element signature="method#setUserJoinActivityState#0;class#ClubManagerController#0" />
-            <element signature="method#setUserJoinActivityState#1;class#ClubManagerController#0" />
-            <element signature="method#deleteUserJoinActivity#0;class#ClubManagerController#0" />
-            <element signature="method#setUserJoinActivityStateNew#1;class#ClubManagerController#0" />
-            <element signature="method#showActivityManage#0;class#ClubManagerController#0" />
-            <element signature="method#deleteUserJoinActivity#1;class#ClubManagerController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyCreatedActivityPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="73" column="150" selection-start-line="73" selection-start-column="150" selection-end-line="73" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityUserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#judgeLogIn#0;class#SystemManagerController#0" />
+            <element signature="method#changePassword#0;class#SystemManagerController#0" />
+            <element signature="method#showInfoPage#0;class#SystemManagerController#0" />
+            <element signature="method#changeName#0;class#SystemManagerController#0" />
+            <element signature="method#changeEmail#0;class#SystemManagerController#0" />
+            <element signature="method#changeTel#0;class#SystemManagerController#0" />
+            <element signature="method#passUserApply#0;class#SystemManagerController#0" />
+            <element signature="method#addNewMessage#0;class#SystemManagerController#0" />
+            <element signature="method#resetUserPassWord#0;class#SystemManagerController#0" />
+            <element signature="method#showValidClubAll#0;class#SystemManagerController#0" />
+            <element signature="method#showClubApply#0;class#SystemManagerController#0" />
+            <element signature="method#reStartClub#0;class#SystemManagerController#0" />
+            <element signature="method#stopClub#0;class#SystemManagerController#0" />
+            <element signature="method#passClubApply#0;class#SystemManagerController#0" />
+            <element signature="method#refuseClubApply#0;class#SystemManagerController#0" />
+            <element signature="method#downLoadFile#0;class#SystemManagerController#0" />
+            <element signature="method#showSystemNoticeInfo#0;class#SystemManagerController#0" />
+            <element signature="method#saveSystemNotice#0;class#SystemManagerController#0" />
+            <element signature="method#updateSystemNotice#0;class#SystemManagerController#0" />
+            <element signature="method#showUserAll#0;class#SystemManagerController#0" />
+            <element signature="method#showClubAll#0;class#SystemManagerController#0" />
+            <element signature="method#showActivityPlaceAll#0;class#SystemManagerController#0" />
+            <element signature="method#createActivityPlace#0;class#SystemManagerController#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/Activity.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="261" selection-start-line="261" selection-end-line="261" selection-end-column="65" />
+        <state relative-caret-position="5800">
+          <caret line="232" column="110" selection-start-line="232" selection-start-column="96" selection-end-line="232" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserApplyActivity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2875">
+          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerUserManageInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/systemManager/systemManagerUserAll.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2031">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
           <folding>
-            <element signature="n#c:if#0;n#jsp:root#0;n#!!top" />
+            <element signature="e#2881#3536#0#HTML" />
+            <element signature="e#3564#3609#0#HTML" />
+            <element signature="e#3641#4552#0#HTML" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userFriendList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="e#2961#3904#0#HTML" />
+            <element signature="e#3932#3977#0#HTML" />
+            <element signature="e#4009#4998#0#HTML" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotActivity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/service/JoinActivityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/service/impl/JoinActivityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="51" column="90" selection-start-line="51" selection-start-column="90" selection-end-line="51" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userSideBar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="81" column="67" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userHotClubInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="63" selection-end-column="44" />
+          <folding>
+            <element signature="e#9001#9180#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/dao/JoinActivityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userInfoPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="60" selection-end-column="9" />
+          <folding>
+            <element signature="e#2756#3454#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyInvite.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerCreateActivity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5350">
+          <caret line="214" column="78" selection-start-line="214" selection-start-column="78" selection-end-line="214" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/ClubManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22175">
+          <caret line="951" column="40" selection-start-line="951" selection-start-column="22" selection-end-line="951" selection-end-column="40" />
+          <folding>
+            <element signature="e#18446#19943#0" />
+            <element signature="e#19949#20749#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userUserApplyActivity.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-530">
-          <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
+        <state relative-caret-position="1750">
+          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="71" selection-end-column="86" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userCreateManageActivityPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="75" column="79" selection-start-line="75" selection-start-column="79" selection-end-line="75" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/base/ActivityInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="275" column="161" selection-start-line="275" selection-start-column="161" selection-end-line="275" selection-end-column="161" />
+          <folding>
+            <element signature="n#c:if#10;n#c:if#1;n#jsp:root#0;n#!!top" />
+            <element signature="n#c:forEach#0;n#c:if#11;n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/club/clubManagerDiscussInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-803">
+          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+          <folding>
+            <element signature="n#c:if#0;n#jsp:root#0;n#!!top" />
+            <element signature="n#c:forEach#0;n#c:if#1;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/domain/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="197" column="13" selection-start-line="197" selection-start-column="13" selection-end-line="197" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="1417" column="34" selection-start-line="1417" selection-start-column="34" selection-end-line="1417" selection-end-column="34" />
+          <folding>
+            <element signature="e#24995#25680#0" />
+            <element signature="e#63214#65209#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/dao/ActivityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-339">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityManageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2205">
+          <caret line="175" column="7" selection-start-line="175" selection-start-column="7" selection-end-line="175" selection-end-column="7" />
+          <folding>
+            <element signature="method#createIndividualList#0;class#ActivityManageUtil#0" />
+            <element signature="method#fitnessCalculation#0;class#ActivityManageUtil#0" />
+            <element signature="method#selectGeneration#0;class#ActivityManageUtil#0" />
+            <element signature="method#crossOperation#0;class#ActivityManageUtil#0" />
+            <element signature="method#mutationOperation#0;class#ActivityManageUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinedClub.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/userMyJoinActivity.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37375">
-          <caret line="1514" column="34" selection-start-line="1514" selection-start-column="22" selection-end-line="1514" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/system/utils/ActivityManageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="244" column="27" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
+        <state relative-caret-position="299">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
           <folding>
-            <element signature="method#mutationOperation#0;class#ActivityManageUtil#0" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

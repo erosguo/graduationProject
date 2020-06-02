@@ -137,7 +137,7 @@
     <title>登录</title>
 </head>
 
-<body style="background-image:url('<%=path%>/static/img/systemBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<body class="hold-transition login-page">
     <jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
 
 
@@ -184,6 +184,5 @@
 
     </div>
 
-    <jsp:include page="/WEB-INF/pages/base/footer.jsp" flush="true"></jsp:include>
 </body>
 </html>

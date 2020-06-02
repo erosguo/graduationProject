@@ -48,8 +48,7 @@
                     alert("服务器处理中");
                     if (map.msg == "1") {
                         alert("修改成功");
-                        //判断跳转页面
-                        /*window.self.location = "/User/showUserStation";*/
+                        location.reload();
 
                     } else {
                         alert("提示','修改失败" + map.msg);
@@ -64,18 +63,60 @@
 
     </script>
 
+    <link rel="stylesheet" href="<%=path%>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
+
     <title>修改密码</title>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
 
-<div class="pageContainer container-fluid">
-    <%--导航栏--%>
+<body class="hold-transition skin-blue-light sidebar-mini">
+
+
+
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
     <jsp:include page="/WEB-INF/pages/user/userSideBar.jsp"></jsp:include>
-    <div class="divider"></div>
-    <!-- 正文内容部分 -->
-        <div class="pageContent container-fluid col-md-10">
+    <div class="content-wrapper">
+
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 修改密码</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            </br>
+            </br>
+            </br>
             <div class="row">
                 <br/>
                 <br/>
@@ -102,12 +143,19 @@
                     </div>
                 </form>
             </div>
-        </div>
+
+        </section>
+        <!-- 正文区域 /-->
+
+    </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
 
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
 </body>
+
+
 <script>
     $("#userPassword2").blur(checkPassword);
 </script>

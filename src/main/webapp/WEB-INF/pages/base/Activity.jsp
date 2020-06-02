@@ -45,17 +45,15 @@
 
 
     <script>
-        function signInActivity() {
-
+        function signInActivity(activityId) {
             $.ajax({
                 url: '<%=path %>/User/signInActivity',
-                data: "activityId=" + ${activity.activity.activityId},
+                data: "activityId=" + activityId,
                 type: 'post',
                 success: function (map) {
                     alert("申请中");
                     if (map.msg == "1") {
                         alert("申请成功");
-
                         //刷新页面
                         location.reload()
 
@@ -67,20 +65,17 @@
                 },
                 error: function (xhr, status, error) {
                     /*alert("提示",xhr.responseText);*/
-                    /*alert("提示，服务器错误" + xhr.responseText);*/
-                    alert("申请成功");
-                    window.self.location = "<%=path %>/User/showActivityDetail?activityId=" +${activity.activity.activityId};
-
+                    alert("提示，服务器错误" + xhr.responseText);
                 }
 
             });
         }
 
-        function cancelSignInActivity() {
+        function cancelSignInActivity(activityId) {
 
             $.ajax({
                 url: '<%=path %>/User/cancelSignInActivity',
-                data: "activityId=" + ${activity.activity.activityId},
+                data: "activityId=" + activityId,
                 type: 'post',
                 success: function (map) {
                     alert("取消中");
@@ -97,9 +92,8 @@
                 },
                 error: function (xhr, status, error) {
                     /*alert("提示",xhr.responseText);*/
-                    /*alert("提示，服务器错误" + xhr.responseText);*/
-                    //刷新页面
-                    window.self.location = "<%=path %>/User/showActivityDetail?activityId=" +${activity.activity.activityId};
+                    alert("提示，服务器错误" + xhr.responseText);
+
                 }
 
             });
@@ -107,8 +101,7 @@
     </script>
     <title>活动详情</title>
 </head>
-<body id="wrapper"
-      style="background-image:url('<%=path%>/static/img/systemBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
+<body id="wrapper">
 <%--页眉部分--%>
 <jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
 <%--主体部分--%>
@@ -237,10 +230,10 @@
                 <div class="col-md-offset-2 col-md-10 data text-center">
                     <c:if test="${activity.activity.activityState==2}">
                         <c:if test="${activity.isUserJoin==0}">
-                            <button class="btn btn-maroon" type="button" name="submit" onclick="signInActivity()">立即报名</button>
+                            <button class="btn btn-maroon" type="button" name="submit" onclick="signInActivity(${activity.activity.activityId})">立即报名</button>
                         </c:if>
                         <c:if test="${activity.isUserJoin==1}">
-                            <button class="btn btn-maroon" type="button" name="submit" onclick="cancelSignInActivity()">取消报名</button>
+                            <button class="btn btn-maroon" type="button" name="submit" onclick="cancelSignInActivity(${activity.activity.activityId})">取消报名</button>
                         </c:if>
                     </c:if>
                     <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
@@ -259,6 +252,6 @@
 
 </div>
 <%--页脚部分--%>
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+<%--<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>--%>
 </body>
 </html>

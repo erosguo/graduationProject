@@ -17,6 +17,29 @@
     <link type="text/css" href="<%=path %>/static/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="<%=path %>/static/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="<%=path%>/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/morris/morris.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/treeTable/jquery.treetable.theme.default.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/select2/select2.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="<%=path%>/static/css/style.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-slider/slider.css">
+    <link rel="stylesheet" href="<%=path%>/static/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css">
+
+
     <title>兴趣爱好</title>
 
     <script>
@@ -42,18 +65,51 @@
         }
     </script>
 </head>
-<body id="wrapper" style="background-image:url('<%=path%>/static/img/userBack.jpg');background-repeat:no-repeat;background-size:120% 120%;background-attachment: fixed;background-position-y:-100px;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
 
-<!--2.主体部分-->
-<div class="container-fluid">
-    <div class="pageContainer">
+<body class="hold-transition skin-blue-light sidebar-mini">
 
-        <!-- 正文内容部分 -->
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <aside class="main-sidebar skin-blue">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="<%=path%>/static/img/user.jpeg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p><%= request.getSession().getAttribute("account")%>
+                    </p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="header">请选择兴趣爱好</li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
 
-        <div class="pageContent container-fluid col-md-10">
-            <div class="row">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 兴趣爱好</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            <br/><br/><br/><br/>
+            <div class="row col-sm-offset-5">
                 <form>
 
                     <div class="checkbox">
@@ -71,13 +127,15 @@
 
             </div>
 
-
-        </div>
-
+        </section>
+        <!-- 正文区域 /-->
 
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp" flush="true"></jsp:include>
+
+
 </body>
+
 </html>

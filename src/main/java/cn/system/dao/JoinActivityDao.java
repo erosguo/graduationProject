@@ -20,6 +20,11 @@ public interface JoinActivityDao {
     @ResultMap("JoinActivity")
     public List<JoinActivity> findJoinActivityAllByActivityId(@Param("ActivityId")int ActivityId);
 
+    @Select("select * from USER_CLUBDISCUSS_JOINACTIVITY where UserId=#{UserId} and JoinActivityIsSuccess=#{JoinActivityIsSuccess}")
+    @ResultMap("JoinActivity")
+    public List<JoinActivity> findJoinActivityAllByUserState(@Param("UserId")String userId,@Param("JoinActivityIsSuccess")int JoinActivityIsSuccess);
+
+
     @Select("select * from USER_CLUBDISCUSS_JOINACTIVITY where UserId=#{UserId}")
     @ResultMap("JoinActivity")
     public List<JoinActivity> findJoinActivityAllByUserId(@Param("UserId")String UserId);

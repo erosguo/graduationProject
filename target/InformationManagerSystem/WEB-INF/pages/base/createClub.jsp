@@ -55,7 +55,7 @@
     </script>
     <title>创建社团</title>
 </head>
-<body id="wrapper" class="bg-success">
+<body class="hold-transition register-page">
     <jsp:include page="/WEB-INF/pages/base/baseTop.jsp"></jsp:include>
     <div class="container-fluid ">
         <div class="row">
@@ -99,7 +99,6 @@
         </div>
 
     </div>
-    <jsp:include page="/WEB-INF/pages/base/footer.jsp" flush="true"></jsp:include>
 </body>
 <script>
     function checkClubName() {

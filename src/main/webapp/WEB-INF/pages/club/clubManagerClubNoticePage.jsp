@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
 <% String path = request.getContextPath();%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <!-- 页面meta -->
@@ -69,18 +70,33 @@
     </script>
 
 </head>
-<body style="background-image:url('<%=path%>/static/img/clubManagerBack.jpg');background-repeat:no-repeat;background-size:100% 100%;background-attachment: fixed;">
-<!--1.页眉部分-->
-<jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+
+<body class="hold-transition skin-purple sidebar-mini">
 
 
-<div class="container-fluid">
-    <div class="row">
+<div class="wrapper">
+    <!--1.页眉部分-->
+    <jsp:include page="/WEB-INF/pages/base/stationTop.jsp" flush="true"></jsp:include>
+    <jsp:include page="/WEB-INF/pages/club/clubManagerSideBar.jsp" flush="true"></jsp:include>
+    <div class="content-wrapper">
 
-        <!--左边菜单栏-->
-        <jsp:include page="/WEB-INF/pages/club/clubManagerSideBar.jsp"></jsp:include>
-        <div class="divider"></div>
-        <div class="pageContent container-fluid col-md-10">
+        <!-- 内容头部 -->
+        <section class="content-header">
+            <h1>
+                大学生课外活动管理系统
+                <small>后台管理</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 社团公告</a></li>
+            </ol>
+        </section>
+        <!-- 内容头部 /-->
+
+        <!-- 正文区域 -->
+        <section class="content">
+
+            </br>
+            <br/><br/>
             <div class="row" style="vertical-align: middle;">
                 </br>
                 <div class="form-group">
@@ -100,13 +116,14 @@
                 <button type="button" class="btn btn-default col-sm-offset-3" onclick="changeNotice()">更改公告</button>
 
             </div>
-
-            </div>
-        </div>
+        </section>
+        <!-- 正文区域 /-->
 
     </div>
+    <!--3.页脚部分-->
+    <jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
 </div>
-<!--3.页脚部分-->
-<jsp:include page="/WEB-INF/pages/base/footer.jsp"></jsp:include>
+
+
 </body>
 </html>

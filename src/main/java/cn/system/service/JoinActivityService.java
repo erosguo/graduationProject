@@ -13,6 +13,7 @@ public interface JoinActivityService {
     public int deleteJoinActivity(String UserId,int ActivityId);
     public int updateJoinActivity(String UserId,int ActivityId,int JoinActivityIsSuccess);
 
+    public List<JoinActivity> findJoinActivityAllByUserState(String userId,int JoinActivityIsSuccess);
 
 
 

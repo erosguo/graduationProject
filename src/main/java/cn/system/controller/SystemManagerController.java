@@ -41,10 +41,11 @@ public class SystemManagerController {
     private SystemNoticeService systemNoticeService;
     @Autowired
     private ActivityPlaceService activityPlaceService;
+    @Autowired
+    private MessageService messageService;
 
     /**
-     * 判断系统管理员能否登录
-     *
+     * 判断系统管理员登录
      * @param account
      * @param userPassword
      * @param request
@@ -105,7 +106,6 @@ public class SystemManagerController {
 
     /**
      * 修改密码
-     *
      * @param userPassword1
      * @param userPassword2
      * @param request
@@ -173,7 +173,6 @@ public class SystemManagerController {
 
     /**
      * 修改名字
-     *
      * @param userName
      * @param request
      * @param response
@@ -218,7 +217,6 @@ public class SystemManagerController {
 
     /**
      * 修改邮箱
-     *
      * @param userEmail
      * @param request
      * @param response
@@ -263,7 +261,6 @@ public class SystemManagerController {
 
     /**
      * 修改手机
-     *
      * @param userTel
      * @param request
      * @param response
@@ -308,7 +305,6 @@ public class SystemManagerController {
 
     /**
      * 展示审核学生界面
-     *
      * @param model
      * @return
      */
@@ -320,10 +316,103 @@ public class SystemManagerController {
         return "systemManager/systemManagerUserApply";
     }
 
+    @RequestMapping("/passUserApply")
+    public ModelAndView passUserApply(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, String userId) throws Exception {
+        ModelAndView mv = new ModelAndView();
+        //1表示通过社团申请
+        int i = userService.updateIsEnableById(userId,1);
+        if (i > 0) {
+            mv.setViewName("redirect:showUserApply?page=" + page + "&size=" + size);
+        } else {
+            mv.setViewName("base/tips");
+            mv.addObject("tips", "服务器出错，请重试");
+        }
+        return mv;
+    }
+
+    /**
+     *
+     * @param userId
+     * @param MessageContent
+     * @param request
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/addNewMessage", method = RequestMethod.POST)
+    public Map<String, Object> addNewMessage(String userId, String MessageContent, HttpServletRequest request) {
+        System.out.println("user id:" + userId + "message Content:" + MessageContent);
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        try {
+            Message message = new Message();
+            Message lastMessage = messageService.findMessageBiggestId();
+            if (lastMessage == null) {
+                message.setMessageId(1);
+            } else {
+                message.setMessageId(lastMessage.getMessageId() + 1);
+            }
+            String account = (String) request.getSession().getAttribute("account");
+            message.setMessageContent(MessageContent);
+            //3表示来自系统管理员
+            message.setMessageType(3);
+            message.setUserId(userId);
+            message.setMessageFrom(account);
+            System.out.println("message:" + message);
+            int i = messageService.saveMessage(message);
+            if (i > 0) {
+                map.put("msg", "1");
+            } else {
+                map.put("msg", "2");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            map.put("msg", e.getMessage());
+        }
+
+        System.out.println("表现层，返回map");
+        return map;
+    }
+
+
+    /**
+     *
+     * @param userId
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/resetUserPassWord")
+    @ResponseBody
+    public Map<String, Object> resetUserPassWord(String userId) throws Exception {
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        int i=userService.updateUserPasswordById(userId,"11111111");
+        if(i>0){
+            map.put("msg","1");
+        }else{
+            map.put("msg","修改失败");
+        }
+        return map;
+    }
+
+
+    @RequestMapping("/refuseUserApply")
+    public ModelAndView refuseUserApply(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, String userId) throws Exception {
+
+        ModelAndView mv = new ModelAndView();
+        //3表示拒绝申请
+        int i = userService.deleteUserById(userId);
+        if (i > 0) {
+            mv.setViewName("redirect:showUserApply?page=" + page + "&size=" + size);
+        } else {
+            mv.setViewName("base/tips");
+            mv.addObject("tips", "服务器出错，请重试");
+        }
+        return mv;
+    }
+
 
     /**
      * 展示所有已经审核的社团
-     *
      * @param model
      * @return
      */
@@ -380,7 +469,14 @@ public class SystemManagerController {
     }
 
 
-
+    /**
+     * 重启社团
+     * @param page
+     * @param size
+     * @param clubId
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/reStartClub")
     public ModelAndView reStartClub(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, int clubId) throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -404,6 +500,15 @@ public class SystemManagerController {
         }
         return mv;
     }
+
+    /**
+     * 暂停社团
+     * @param page
+     * @param size
+     * @param clubId
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/stopClub")
     public ModelAndView stopClub(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, int clubId) throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -430,6 +535,14 @@ public class SystemManagerController {
         return mv;
     }
 
+    /**
+     * 通过社团申请
+     * @param page
+     * @param size
+     * @param clubId
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/passClubApply")
     public ModelAndView passClubApply(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, int clubId) throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -457,6 +570,14 @@ public class SystemManagerController {
         return mv;
     }
 
+    /**
+     * 拒绝社团申请
+     * @param page
+     * @param size
+     * @param clubId
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/refuseClubApply")
     public ModelAndView refuseClubApply(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size, int clubId) throws Exception {
         System.out.println("method:refuseClubApply");
@@ -472,9 +593,9 @@ public class SystemManagerController {
         return mv;
     }
 
+
     /**
      * 下载社团申请文件
-     *
      * @param request
      * @param response
      * @param filename
@@ -501,7 +622,6 @@ public class SystemManagerController {
 
     /**
      * 展示创建系统公告页
-     *
      * @return
      */
     @RequestMapping("/showCreateSystemNoticePage")
@@ -511,7 +631,6 @@ public class SystemManagerController {
 
     /**
      * 展示修改系统公告页
-     *
      * @param model
      * @return
      */
@@ -525,7 +644,6 @@ public class SystemManagerController {
 
     /**
      * 删除社团公告
-     *
      * @param noticeId
      * @return
      */
@@ -550,7 +668,6 @@ public class SystemManagerController {
 
     /**
      * 创建系统公告
-     *
      * @param noticeName
      * @param noticeContent
      * @param request
@@ -591,7 +708,6 @@ public class SystemManagerController {
 
     /**
      * 修改系统公告
-     *
      * @param noticeId
      * @param noticeName
      * @param noticeContent
@@ -663,6 +779,16 @@ public class SystemManagerController {
         return "systemManager/systemManagerActivityPlaceAll";
     }
 
+    /**
+     *
+     * @param activityPlaceName
+     * @param activityPlaceWeek
+     * @param activityPlaceWeekDay
+     * @param activityPlaceTeach
+     * @param request
+     * @param response
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/createActivityPlace", method = RequestMethod.POST)
     public Map<String, Object> createActivityPlace(String activityPlaceName, int activityPlaceWeek, int activityPlaceWeekDay, int activityPlaceTeach, HttpServletRequest request, HttpServletResponse response) {
@@ -680,6 +806,7 @@ public class SystemManagerController {
         activityPlace.setActivityPlaceWeek(activityPlaceWeek);
         activityPlace.setActivityPlaceWeekDay(activityPlaceWeekDay);
         activityPlace.setActivityPlaceTeach(activityPlaceTeach);
+        //1表示地点可用
         activityPlace.setActivityPlaceIsEnable(1);
 
         try {
@@ -698,4 +825,18 @@ public class SystemManagerController {
         System.out.println("表现层，返回map");
         return map;
     }
+
+    @RequestMapping("/cancelActivityPlace")
+    public ModelAndView cancelActivityPlace(@RequestParam(name = "page", required = true, defaultValue = "1") int page, @RequestParam(name = "size", required = true, defaultValue = "3") int size,String activityPlaceId,HttpServletRequest request) throws Exception{
+        ModelAndView mv = new ModelAndView();
+        int i=activityPlaceService.deleteActivityPlace(activityPlaceId);
+        if(i>0){
+            mv.setViewName("redirect:showActivityPlaceAll?page=" + page + "&size=" + size);
+        }else{
+            mv.setViewName("base/tips");
+            mv.addObject("tips","取消失败");
+        }
+        return mv;
+    }
+
 }
